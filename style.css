@@ -266,6 +266,20 @@ img {
   filter: drop-shadow(0 0 0.75rem rgba(73,198,229,.7));
 }
 
+/* ---------- PROTÓTIPO OFC ---------- */
+
+.prototipoOfc {
+  position: absolute;
+  top: 7.5rem;
+  left: 5rem;
+  width: 40.625rem;
+}
+
+.prototipoOfc img {
+  width: 100%;
+  filter: drop-shadow(0 0 0.75rem rgba(73,198,229,.7));
+}
+
 /* ---------- DIFERENCIAIS ---------- */
 
 .politicas {
