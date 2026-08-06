@@ -5,11 +5,32 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: linear-gradient(135deg, #030044, #0B0E16, #04031D);
   color: #fff;
   position: relative;
   min-height: 100vh;
+}
+
+/* ---------- ANIMAÇÕES ---------- */
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(2rem); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(2rem); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-2rem); }
+  to   { opacity: 1; transform: translateX(0); }
 }
 
 /* ---------- IMAGENS ---------- */
@@ -191,6 +212,7 @@ img {
   padding-top: 9.375rem;
   padding-left: 2.5rem;
   max-width: 43.75rem;
+  animation: fadeInLeft 0.7s ease both;
 }
 
 .conteudoInicial h1 {
@@ -212,6 +234,7 @@ img {
   display: flex;
   gap: 1.875rem;
   margin-top: 2.5rem;
+  animation: fadeInUp 0.7s 0.2s ease both;
 }
 
 .botoes button {
@@ -259,6 +282,7 @@ img {
   top: 7.5rem;
   right: 3.125rem;
   width: 40.625rem;
+  animation: fadeInRight 0.8s 0.1s ease both;
 }
 
 .prototipo img {
@@ -271,8 +295,9 @@ img {
 .prototipoOfc {
   position: absolute;
   top: 7.5rem;
-  left: 5rem;
+  right: 3.125rem;
   width: 40.625rem;
+  animation: fadeInRight 0.8s 0.1s ease both;
 }
 
 .prototipoOfc img {
@@ -293,6 +318,7 @@ img {
   margin-top: 20rem;
   padding: 0 1.875rem;
   box-sizing: border-box;
+  animation: fadeInUp 0.7s 0.3s ease both;
 }
 
 .diferencial,
@@ -329,12 +355,13 @@ img {
   grid-template-columns: repeat(2, 20rem);
   gap: 1.5rem 8rem;
 
-  justify-content: center; /* Centraliza as colunas */
+  justify-content: center;
   align-content: center;
 
   width: 100%;
   margin: 5rem auto;
   margin-top: 10rem;
+  animation: fadeInUp 0.7s 0.4s ease both;
 }
 
 .card {
@@ -347,6 +374,13 @@ img {
 
   padding: 0.8rem 0.5rem;
   background: transparent;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-0.25rem);
+  border-color: rgba(73, 198, 229, 0.8);
+  box-shadow: 0 0 0.75rem rgba(73, 198, 229, 0.25);
 }
 
 .card img {

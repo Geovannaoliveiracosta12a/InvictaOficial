@@ -5,11 +5,32 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: linear-gradient(135deg, #030044, #0B0E16, #04031D);
   color: #fff;
   position: relative;
   min-height: 100vh;
+}
+
+/* ---------- ANIMAÇÕES ---------- */
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(2rem); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(2rem); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-2rem); }
+  to   { opacity: 1; transform: translateX(0); }
 }
 
 /* ---------- IMAGENS ---------- */
@@ -186,6 +207,7 @@ img {
 /*-----------CONTEUDO INICIAL-----------*/
 .conteudoInicial{
   margin-left: 10rem;
+  animation: fadeInLeft 0.7s ease both;
   h1{
     margin-top: 15rem;
   }
@@ -198,6 +220,7 @@ img {
   display: flex;
   gap: 1.875rem;
   margin-top: 2.5rem;
+  animation: fadeInUp 0.7s 0.2s ease both;
 }
 
 .botoes button {
@@ -240,12 +263,14 @@ img {
 
 
 .prototipoOfc {
-  display: flex;
-  justify-content: flex-start; /* Alinha à esquerda */
-  align-items: center;
+  position: absolute;
+  top: 7.5rem;
+  right: 3.125rem;
+  width: 40.625rem;
+  animation: fadeInRight 0.8s 0.1s ease both;
 }
 
 .prototipoOfc img {
-  width: 300px; /* ajuste conforme necessário */
-  height: auto;
+  width: 100%;
+  filter: drop-shadow(0 0 0.75rem rgba(73,198,229,.7));
 }
