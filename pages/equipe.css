@@ -217,12 +217,12 @@ img {
 }
 
 /* ---------- DESCRIÇÃO DO TÍTULO ---------- */
-.descricao{
+#descricao{
   width: 680px;
   margin-top: 10px
 }
 
-.descricao, p{
+#descricao, p{
   color: #FFF;
   font-family: Montserrat;
   font-size: 16px;
@@ -253,6 +253,7 @@ img {
 
 .card{
   width: 300px;
+
 }
 
 .card img{
@@ -273,6 +274,10 @@ img {
 .info-card h4{
   margin: 0;
   background: none; 
+}
+
+.info-card p{
+  font-size: 12px;
 }
 
 #geo{
@@ -299,7 +304,7 @@ img {
 
 .card{
   width: 300px;
-  height: 350px; 
+  height: 350px;
 }
 
 }

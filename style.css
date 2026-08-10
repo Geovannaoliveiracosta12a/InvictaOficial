@@ -15,6 +15,8 @@ body {
   position: relative;
   min-height: 100vh;
 }
+
+
 /*mão de marcinho para definir a largura da tela*/
 #page {
   /* border: 1px solid red; */
@@ -299,7 +301,7 @@ img {
 /* ---------- PROTÓTIPO OFC ---------- */
 
 .prototipoOfc {
-  position: absolute;
+  
   top: 7.5rem;
   right: 3.125rem;
   width: 40.625rem;
