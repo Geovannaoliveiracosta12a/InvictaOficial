@@ -1,0 +1,489 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, #030044, #0B0E16, #04031D);
+  color: #fff;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* =========================================================
+   ANIMAÇÕES
+========================================================= */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   IMAGENS
+========================================================= */
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* =========================================================
+   MENU LATERAL
+========================================================= */
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 4.6875rem;
+  height: 100vh;
+
+  background: #05032A;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 1.25rem 0.9375rem;
+
+  overflow: hidden;
+
+  transition: width 0.35s ease;
+
+  border-radius: 0 1.25rem 1.25rem 0;
+
+  z-index: 999;
+}
+
+/* Quando passa o mouse, o menu abre */
+.menu:hover {
+  width: 16.25rem;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  gap: 0.9375rem;
+
+  margin-bottom: 2.5rem;
+
+  flex-shrink: 0;
+}
+
+.logo img {
+  width: 2.5rem;
+  height: 2.5rem;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+}
+
+.logo span {
+  font-size: 2rem;
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  opacity: 0;
+
+  transition: opacity 0.3s ease;
+}
+
+.menu:hover .logo span {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   PESQUISA
+========================================================= */
+
+.pesquisa {
+  display: flex;
+  align-items: center;
+
+  gap: 0.9375rem;
+
+  width: 100%;
+
+  background: #1C1A46;
+
+  border-radius: 0.625rem;
+
+  padding: 0.75rem;
+
+  margin-bottom: 1.5625rem;
+
+  flex-shrink: 0;
+}
+
+.pesquisa img {
+  width: 1.625rem;
+  height: 1.625rem;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+}
+
+.pesquisa span {
+  white-space: nowrap;
+
+  opacity: 0;
+
+  transition: opacity 0.3s ease;
+}
+
+.menu:hover .pesquisa span {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   ITENS DO MENU
+========================================================= */
+
+.item-menu {
+  display: flex;
+  align-items: center;
+
+  gap: 1.125rem;
+
+  width: 100%;
+
+  padding: 0.75rem;
+
+  margin-bottom: 0.5rem;
+
+  border-radius: 0.625rem;
+
+  cursor: pointer;
+
+  transition: background 0.3s ease;
+
+  text-decoration: none;
+
+  color: #fff;
+
+  flex-shrink: 0;
+}
+
+.item-menu:hover {
+  background: #1C1A46;
+}
+
+.item-menu img {
+  width: 1.75rem;
+  height: 1.75rem;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+}
+
+.item-menu span {
+  white-space: nowrap;
+
+  opacity: 0;
+
+  transition: opacity 0.3s ease;
+
+  font-size: 1rem;
+
+  font-weight: 500;
+}
+
+.menu:hover .item-menu span {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   USUÁRIO
+========================================================= */
+
+.usuario {
+  margin-top: auto;
+
+  display: flex;
+  align-items: center;
+
+  gap: 0.9375rem;
+
+  width: 100%;
+
+  background: #1C1A46;
+
+  padding: 0.75rem;
+
+  border-radius: 0.625rem;
+
+  flex-shrink: 0;
+}
+
+/* Ícone do usuário */
+.usuario img {
+  width: 2.1875rem;
+  height: 2.1875rem;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+}
+
+
+/* Informações do usuário */
+.dados-usuario {
+  opacity: 0;
+
+  max-width: 0;
+
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  transition:
+    opacity 0.3s ease,
+    max-width 0.3s ease;
+}
+
+.menu:hover .dados-usuario {
+  opacity: 1;
+
+  max-width: 180px;
+}
+
+
+/* Nome */
+.dados-usuario h4 {
+  font-size: 0.9rem;
+
+  font-weight: 600;
+
+  margin: 0;
+
+  color: #fff;
+}
+
+
+/* E-mail */
+.dados-usuario p {
+  font-size: 0.7rem;
+
+  font-weight: 400;
+
+  color: #bdbdbd;
+
+  margin: 0.25rem 0 0 0;
+
+  width: auto;
+
+  height: auto;
+}
+
+
+/* =========================================================
+   IMAGEM PRINCIPAL DO SIMCE
+========================================================= */
+
+#img-simce {
+  margin-left: 137px;
+
+  margin-top: 72px;
+
+  width: 1180px;
+
+  height: 787px;
+
+  aspect-ratio: 3 / 2;
+
+  border-radius: 126px;
+
+  opacity: 0.80;
+
+  object-fit: cover;
+}
+
+
+/* =========================================================
+   TÍTULO
+========================================================= */
+
+.titulo {
+  margin-top: 160px;
+
+  margin-left: 233px;
+
+  color: #fff;
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 54px;
+
+  font-style: normal;
+
+  font-weight: 700;
+
+  line-height: normal;
+
+  animation: fadeInUp 0.6s ease both;
+}
+
+
+/* =========================================================
+   SUBTÍTULO
+========================================================= */
+
+.subtititulo {
+  margin-top: 52px;
+
+  margin-left: 233px;
+}
+
+.subtititulo h2 {
+  color: #fff;
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 26px;
+
+  font-style: normal;
+
+  font-weight: 600;
+
+  line-height: normal;
+}
+
+
+/* =========================================================
+   DESCRIÇÕES
+========================================================= */
+
+/*
+   IMPORTANTE:
+   Não usar apenas "p {}" aqui.
+
+   A classe .texto-descricao serve somente para
+   os textos da página do jogo.
+*/
+
+.texto-descricao {
+  margin-left: 233px;
+
+  width: 871px;
+
+  height: 83px;
+
+  color: #fff;
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 300;
+
+  line-height: normal;
+}
+
+.descricao2 {
+  margin-top: 23px;
+}
+
+#descricao {
+  margin-top: 40px;
+}
+
+
+/* =========================================================
+   VÍDEO / GAMEPLAY
+========================================================= */
+
+#video-games {
+  margin-top: 135px;
+
+  margin-left: 224px;
+
+  width: 1004px;
+
+  height: 448px;
+
+  border-radius: 20px;
+
+  margin-bottom: 65px;
+}
+
+
+/* =========================================================
+   BOTÃO DO JOGO
+========================================================= */
+
+.botao-jogo {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  margin-left: 530px;
+
+  margin-bottom: 105px;
+
+  width: 290px;
+
+  height: 55px;
+
+  border: none;
+
+  border-radius: 20px;
+
+  background: #44D7E5;
+
+  box-shadow:
+    5px 5px 7px 1px rgba(68, 215, 229, 0.50);
+
+  color: #030044;
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 20px;
+
+  font-style: normal;
+
+  font-weight: 700;
+
+  line-height: normal;
+
+  cursor: pointer;
+
+  transition: transform 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+.botao-jogo:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    5px 7px 10px 2px rgba(68, 215, 229, 0.50);
+}
