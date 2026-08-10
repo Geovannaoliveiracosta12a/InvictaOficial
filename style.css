@@ -15,6 +15,12 @@ body {
   position: relative;
   min-height: 100vh;
 }
+/*mão de marcinho para definir a largura da tela*/
+#page {
+  /* border: 1px solid red; */
+  max-width: 1300px;
+  margin-inline: auto;
+}
 
 /* ---------- ANIMAÇÕES ---------- */
 
