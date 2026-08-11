@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  background: linear-gradient(135deg, #030044, #0B0E16, #04031D);
+  background: linear-gradient(180deg, #FFF 0%, #BDEBFD 56.25%, #FFF 100%);
   color: #fff;
   position: relative;
   min-height: 100vh;
@@ -46,7 +46,7 @@ img {
   height: 100vh;
   text-decoration: none;
 
-  background: #05032A;
+  background: #D0EEFB;
 
   display: flex;
   flex-direction: column;
@@ -97,7 +97,7 @@ img {
   align-items: center;
   gap: 0.9375rem;
 
-  background: #1C1A46;
+  background: rgba(161, 220, 230, 0.70);
   border-radius: 0.625rem;
 
   padding: 0.75rem;
@@ -137,11 +137,11 @@ img {
   transition: .3s ease;
 
   text-decoration: none;
-  color: #fff;
+  color: #fff; /*n consegui descobrir qual a cor*/
 }
 
 .item-menu:hover {
-  background: #1C1A46;
+  background: #1C1A46; /*n consegui descobrir qual a cor*/
 }
 
 .item-menu img {
@@ -173,7 +173,7 @@ img {
   align-items: center;
   gap: 0.9375rem;
 
-  background: #1C1A46;
+  background: rgba(161, 220, 230, 0.70);
   padding: 0.75rem;
   border-radius: 0.625rem;
 }
@@ -199,7 +199,7 @@ img {
 
 .dados-usuario p {
   font-size: .7rem;
-  color: #bdbdbd;
+  color: #1C1A46;
   margin: 0.25rem 0 0 0;
 }
 
@@ -229,7 +229,7 @@ img {
 }
 
 .item-menu:hover {
-  background: #1C1A46;
+  background: #1C1A46; /*n consegui descobrir qual a cor*/
 }
 
 .item-menu img {

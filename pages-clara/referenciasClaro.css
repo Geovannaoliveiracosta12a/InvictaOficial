@@ -1,3 +1,5 @@
+/* ---------- CSS DO MENU ---------- */
+
 * {
   margin: 0;
   padding: 0;
@@ -14,12 +16,6 @@ body {
   color: #fff;
   position: relative;
   min-height: 100vh;
-}
-
-#page {
-  /* border: 1px solid red; */
-  max-width: 1300px;
-  margin-inline: auto;
 }
 
 /* ---------- ANIMAÇÕES ---------- */
@@ -247,183 +243,81 @@ img {
   font-weight: 500;
 }
 
-/* ---------- INÍCIO DO CSS EQUIPE  ---------- */
-/* ---------- TÍTULO ---------- */
-
-.titulo {
-  width: 788px;
-  height: 59px;
-  aspect-ratio: 788/59;
+/* ---------- INICIO DE REFERENCIAS ---------- */
+h1{
+  text-align: center;
+  margin-top: 30px;
+  margin-top: 114px;-
 }
 
-.titulo, h1{
-  color: #FFF;
-  font-family: Montserrat;
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  margin-left: 66px;
-  margin-top: 240px;
-}
-
-/* ---------- DESCRIÇÃO DO TÍTULO ---------- */
-#descricao{
-  width: 680px;
-  margin-top: 10px
-}
-
-#descricao, p{
-  color: #FFF;
-  font-family: Montserrat;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
-  margin-left: 130px;
-}
-
-/* ---------- IMAGENS DA EQUIPE ---------- */
-
-.linha-meninas{
-    display: flex;
-    gap: 100px; 
-    margin-top: 119px;
-    
-}
-
-.info-card p,
-.info-card h4{
-  color: #000000;
-  padding-left: 15px;
-}
-
-.info-card h4{
-  font-weight: 600;
-}
-
-.card{
-  width: 300px;
-
-}
-
-.card img{
-  width: 300px;
-  display: block;
-  border-radius: 20px 20px 0 0;
-}
-
-.info-card{
-  width: 300px;
-  background: #E3F1F3;
-  border-radius: 0 0 20px 20px;
-  padding: 15px 0;
-  
-}
-
-.info-card p,
-.info-card h4{
-  margin: 0;
-  background: none; 
-}
-
-.info-card p{
-  font-size: 12px;
-}
-
-#geo{
-  margin-left: 185px
-}
-
-#lia{
-  margin-right: 130px;
-}
-
-#guilherme {
-  margin-left: 361px
-}
-
-#enzo{
-  margin-right: 283px;
-}
-
-.linha-meninos{
-    display: flex;
-    gap: 120px;
-    margin-top: 150px;
-}
-
-.card{
-  width: 300px;
-  height: 350px;
-}
-
-}
-
-/* ---------- CONTATE-NOS  ---------- */
-.informacao{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-h2{
+h1{
   color: #FFF;
   font-family: Montserrat;
   font-size: 54px;
   font-style: normal;
-  font-weight: 300;
-  line-height: normal;
-  margin-top: 100px;
-  color: #CECECE;
-  font-family: Montserrat;
-  font-size: 60px;
-  font-style: normal;
-  font-weight: 100;
+  font-weight: 700;
   line-height: normal;
 }
 
-.informacao label{
+/*--------- REFERÊNCIAS ----------*/
+
+#img-ref {
+    display: block;
+    margin: 65px auto 0;
+}
+
+/*--------- BOTOES ----------*/
+
+.referencias-img {
+  position: relative;
+  width: fit-content;
+  margin: 65px auto 0;
+}
+
+#img-ref {
   display: block;
-  margin-top: 15px;
+  margin: 0;
 }
 
-textarea{
-    height: 40px;
-}
-
-.informacao input,
-.informacao textarea{
-  display: block;
-  width: 946px;
-  margin-bottom: 15px;
-  background: transparent;   
-  border: none;             
-  border-bottom: 1px solid #CECECE; 
-  outline: none;            
-  color: #CECECE;
-  padding: 8px 0;
-  margin-top: 8px;           
-  margin-bottom: 20px; 
-}
-
-.contate-nos{
-  margin-left: 230px; 
-  margin-top: 200px;
-}
-
-button{
-  width: 232px;
-  height: 61px;
-  background: #FFF;
+.referencias-img button {
+  position: absolute;
+  background: transparent;
   border: none;
-  color: #000;
+  color: #96F6FF;
   font-family: Montserrat;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 550;
-  line-height: normal;
-  margin-top: 40px
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#botao-1 {
+  top: 174px;
+  right: 145px;
+}
+
+#botao-2 {
+  top: 475px;
+  right: 145px;
+}
+
+#botao-3 {
+  top: 776px;
+  right: 145px;
+}
+
+#botao-4 {
+  top: 1077px;
+  right: 145px;
+}
+
+#botao-5 {
+  top: 1408px;
+  right: 145px;
+}
+
+#botao-6 {
+  top: 1739px;
+  right: 145px;
 }
 
 
@@ -476,10 +370,3 @@ h3{
   font-weight: 400;
   line-height: normal;
 }
-
-
-  
-
-
-
-
