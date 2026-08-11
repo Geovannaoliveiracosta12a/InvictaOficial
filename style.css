@@ -214,106 +214,146 @@ img {
 }
 
 /* ---------- CONTEÚDO ---------- */
+/* =========================================================
+HERO / APRESENTAÇÃO
+========================================================= */
+
+.hero {
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+width: 100%;
+
+padding-top: 7rem;
+padding-left: 7rem;
+padding-right: 2rem;
+
+}
+
+/* =========================================================
+CONTEÚDO INICIAL
+========================================================= */
+
+.hero-conteudo {
+width: 50%;
+}
 
 .conteudoInicial {
-  margin-left: 8.75rem;
-  padding-top: 9.375rem;
-  padding-left: 2.5rem;
-  max-width: 43.75rem;
-  animation: fadeInLeft 0.7s ease both;
+max-width: 43.75rem;
+
+margin-left: 0;
+padding-top: 2rem;
+padding-left: 2.5rem;
+
+animation: fadeInLeft 0.7s ease both;
+
 }
 
 .conteudoInicial h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 1.15;
+font-size: 2.5rem;
+font-weight: 700;
+line-height: 1.15;
 }
 
 .conteudoInicial p {
-  margin-top: 1.5625rem;
-  font-size: 1.2rem;
-  line-height: 1.7;
-  color: #d9d9d9;
+margin-top: 1.5625rem;
+
+font-size: 1.2rem;
+line-height: 1.7;
+
+color: #d9d9d9;
+
 }
 
-/* ---------- BOTÕES ---------- */
+/* =========================================================
+BOTÕES
+========================================================= */
 
 .botoes {
-  display: flex;
-  gap: 1.875rem;
-  margin-top: 2.5rem;
-  animation: fadeInUp 0.7s 0.2s ease both;
+display: flex;
+gap: 1.5rem;
+
+margin-top: 2.5rem;
+padding-left: 2.5rem;
+
+animation: fadeInUp 0.7s 0.2s ease both;
+
 }
 
 .botoes button {
-  width: 13.75rem;
-  height: 3.625rem;
+width: 13.75rem;
+height: 3.625rem;
 
-  border-radius: 2.1875rem;
+border-radius: 2.1875rem;
 
-  font-size: 1rem;
-  font-weight: 700;
+font-size: 1rem;
+font-weight: 700;
 
-  cursor: pointer;
-  transition: .3s;
+cursor: pointer;
+
+transition: 0.3s ease;
+
 }
 
-.btn-primary {
-  background: #49C6E5;
-  color: #05032A;
-  border: none;
+/* Botão principal */
 
-  box-shadow: 0 0 1.125rem rgba(73,198,229,.5);
-  margin-left: 10rem;
+.btn-primary {
+margin-left: 0;
+
+background: #49C6E5;
+color: #05032A;
+
+border: none;
+
+box-shadow: 0 0 1.125rem rgba(73, 198, 229, 0.5);
+
 }
 
 .btn-primary:hover {
-  transform: translateY(-0.25rem);
-  background: #61d3ef;
+transform: translateY(-0.25rem);
+background: #61d3ef;
 }
 
+/* Botão secundário */
+
 .btn-secondary {
-  background: transparent;
-  color: white;
-  border: 0.125rem solid white;
+background: transparent;
+color: #fff;
+
+border: 0.125rem solid #fff;
+
 }
 
 .btn-secondary:hover {
-  background: rgba(255,255,255,.08);
-  transform: translateY(-0.25rem);
+transform: translateY(-0.25rem);
+background: rgba(255, 255, 255, 0.08);
 }
 
-/* ---------- PROTÓTIPO ---------- */
+/* =========================================================
+PROTÓTIPO
+========================================================= */
 
 .prototipo {
-  position: absolute;
-  top: 7.5rem;
-  right: 3.125rem;
-  width: 40.625rem;
-  animation: fadeInRight 0.8s 0.1s ease both;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 45%;
+
+animation: fadeInRight 0.8s 0.1s ease both;
+
 }
 
 .prototipo img {
-  width: 100%;
-  filter: drop-shadow(0 0 0.75rem rgba(73,198,229,.7));
+width: 100%;
+max-width: 40.625rem;
+
+filter: drop-shadow(
+    0 0 0.75rem rgba(73, 198, 229, 0.7)
+);
+
+
 }
-
-/* ---------- PROTÓTIPO OFC ---------- */
-
-.prototipoOfc {
-  
-  top: 7.5rem;
-  right: 3.125rem;
-  width: 40.625rem;
-  animation: fadeInRight 0.8s 0.1s ease both;
-}
-
-.prototipoOfc img {
-  width: 100%;
-  filter: drop-shadow(0 0 0.75rem rgba(73,198,229,.7));
-}
-
-/* ---------- DIFERENCIAIS ---------- */
 
 .politicas {
   display: flex;
