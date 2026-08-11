@@ -270,10 +270,10 @@ img {
 /* ---------- DESCRIÇÃO DO TÍTULO ---------- */
 #descricao{
   width: 680px;
-  margin-top: 10px
+  margin-top: 10px;
 }
 
-#descricao, p{
+#descricao{
   color: #FFF;
   font-family: Montserrat;
   font-size: 16px;
