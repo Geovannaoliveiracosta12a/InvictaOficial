@@ -10,8 +10,8 @@ html {
 }
 
 body {
-  background: linear-gradient(135deg, #030044, #0B0E16, #04031D);
-  color: #fff;
+  background: linear-gradient(180deg, #FFF 0%, #BDEBFD 56.25%, #FFF 100%);
+  color: #1C1A46;
   position: relative;
   min-height: 100vh;
 }
@@ -51,7 +51,7 @@ body {
 
   width: 4.6875rem;
   height: 100vh;
-  background: #05032A;
+  background: #D0EEFB;
   display: flex;
   flex-direction: column;
   padding: 1.25rem 0.9375rem;
@@ -112,7 +112,7 @@ body {
 
   gap: 0.9375rem;
   width: 100%;
-  background: #1C1A46;
+  background: rgba(161, 220, 230, 0.70);
   border-radius: 0.625rem;
   padding: 0.75rem;
   margin-bottom: 1.5625rem;
@@ -154,12 +154,12 @@ body {
   cursor: pointer;
   transition: background 0.3s ease;
   text-decoration: none;
-  color: #fff;
+  color: #040140;
   flex-shrink: 0;
 }
 
 .item-menu:hover {
-  background: #1C1A46;
+  background: #A1DCE6;
 }
 
 .item-menu img {
@@ -175,6 +175,7 @@ body {
   transition: opacity 0.3s ease;
   font-size: 1rem;
   font-weight: 500;
+  color: #040140;
 }
 
 .menu:hover .item-menu span {
@@ -192,7 +193,7 @@ body {
   align-items: center;
   gap: 0.9375rem;
   width: 100%;
-  background: #1C1A46;
+  background: rgba(161, 220, 230, 0.70);
   padding: 0.75rem;
   border-radius: 0.625rem;
   flex-shrink: 0;
@@ -226,7 +227,7 @@ body {
   font-size: 0.9rem;
   font-weight: 600;
   margin: 0;
-  color: #fff;
+  color: #040140;
 }
 
 
@@ -234,7 +235,7 @@ body {
 .dados-usuario p {
   font-size: 0.7rem;
   font-weight: 400;
-  color: #bdbdbd;
+  color: #040140;
   margin: 0.25rem 0 0 0;
   width: auto;
   height: auto;
@@ -266,7 +267,7 @@ body {
 }
 
 .item-menu:hover {
-  background: #1C1A46;
+  color: rgba(161, 220, 230, 0.70);  
 }
 
 .item-menu img {

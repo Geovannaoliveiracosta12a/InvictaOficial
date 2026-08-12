@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  background: linear-gradient(135deg, #fff, ##BDEBFD, #fff);
+  background: linear-gradient(135deg, #fff, #BDEBFD, #fff);;
   position: relative;
   min-height: 100vh;
 }
@@ -58,7 +58,7 @@ img {
   height: 100vh;
   text-decoration: none;
 
-  background: #05032A;
+  background: #D0EEFB;
 
   display: flex;
   flex-direction: column;
@@ -109,7 +109,8 @@ img {
   align-items: center;
   gap: 0.9375rem;
 
-  background: #1C1A46;
+  background: #A1DCE6B2;
+  opacity: 70%;
   border-radius: 0.625rem;
 
   padding: 0.75rem;
@@ -152,7 +153,7 @@ img {
 }
 
 .item-menu:hover {
-  background: #1C1A46;
+  background: #A1DCE6B2;
 }
 
 .item-menu img {
@@ -183,7 +184,7 @@ img {
   align-items: center;
   gap: 0.9375rem;
 
-  background: #1C1A46;
+  background: #A1DCE6B2;
   padding: 0.75rem;
   border-radius: 0.625rem;
 }
@@ -237,7 +238,7 @@ img {
 }
 
 .item-menu:hover {
-  background: #1C1A46;
+  background: #A1DCE6B2;
 }
 
 .item-menu img {
@@ -359,10 +360,10 @@ background: #61d3ef;
 /* Botão secundário */
 
 .btn-secondary {
-background: transparent;
-color: #fff;
+background: #BADDE3;
+color: #05032A;
 
-border: 0.125rem solid #fff;
+border: 0.125rem solid #05032A;
 
 }
 
@@ -419,7 +420,7 @@ filter: drop-shadow(
 .diferencial h2,
 .objetivo h2,
 .publico h2 {
-  color: #fff;
+  color: #05032A;
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1.125rem;
@@ -429,7 +430,7 @@ filter: drop-shadow(
 .diferencial p,
 .objetivo p,
 .publico p {
-  color: #fff;
+  color: #05032A;
   font-size: 1.1rem;
   line-height: 1.6;
   font-weight: 400;
@@ -458,7 +459,7 @@ filter: drop-shadow(
   align-items: center;
   gap: 1rem;
 
-  border: 0.12rem solid rgba(255, 255, 255, 0.6);
+  border: 0.3rem solid #4F616C;
   border-radius: 0.5rem;
 
   padding: 0.8rem 0.5rem;
@@ -468,7 +469,7 @@ filter: drop-shadow(
 
 .card:hover {
   transform: translateY(-0.25rem);
-  border-color: rgba(73, 198, 229, 0.8);
+  border-color: #05032A;
   box-shadow: 0 0 0.75rem rgba(73, 198, 229, 0.25);
 }
 
@@ -479,7 +480,7 @@ filter: drop-shadow(
 }
 
 .card h3 {
-  color: #fff;
+  color: #05032A;
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.2;
