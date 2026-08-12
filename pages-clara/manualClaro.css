@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  background: linear-gradient(135deg, #030044, #0B0E16, #04031D);
+  background: linear-gradient(135deg, #ffffff, #BDEBFD, #ffffff);
   color: #fff;
   position: relative;
   min-height: 100vh;
@@ -42,7 +42,7 @@ img {
   height: 100vh;
   text-decoration: none;
 
-  background: #05032A;
+  background: #D0EEFB;
 
   display: flex;
   flex-direction: column;
@@ -93,7 +93,7 @@ img {
   align-items: center;
   gap: 0.9375rem;
 
-  background: #1C1A46;
+  background: #D0EEFB;
   border-radius: 0.625rem;
 
   padding: 0.75rem;
@@ -133,7 +133,7 @@ img {
   transition: .3s ease;
 
   text-decoration: none;
-  color: #fff;
+  color: #1C1A46;
 }
 
 .item-menu:hover {
@@ -169,7 +169,7 @@ img {
   align-items: center;
   gap: 0.9375rem;
 
-  background: #1C1A46;
+  background: #D0EEFB;
   padding: 0.75rem;
   border-radius: 0.625rem;
 }
