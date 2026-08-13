@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
+  color: #000;
 }
 
 html {
@@ -93,8 +94,9 @@ img {
   align-items: center;
   gap: 0.9375rem;
 
-  background: #D0EEFB;
+  background: #A1DCE6B2;
   border-radius: 0.625rem;
+  opacity: 70%;
 
   padding: 0.75rem;
   margin-bottom: 1.5625rem;
@@ -137,7 +139,7 @@ img {
 }
 
 .item-menu:hover {
-  background: #1C1A46;
+  background: #D0EEFB;
 }
 
 .item-menu img {
@@ -169,7 +171,7 @@ img {
   align-items: center;
   gap: 0.9375rem;
 
-  background: #D0EEFB;
+  background: #A1DCE6B2;
   padding: 0.75rem;
   border-radius: 0.625rem;
 }
@@ -195,7 +197,7 @@ img {
 
 .dados-usuario p {
   font-size: .7rem;
-  color: #bdbdbd;
+  opacity: 60%;
   margin: 0.25rem 0 0 0;
 }
 
@@ -225,7 +227,7 @@ img {
 }
 
 .item-menu:hover {
-  background: #1C1A46;
+  background: #A1DCE6B2;
 }
 
 .item-menu img {

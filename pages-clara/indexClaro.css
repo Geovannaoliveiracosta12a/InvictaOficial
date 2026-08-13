@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  background: linear-gradient(135deg, #fff, #BDEBFD, #fff);;
+  background: linear-gradient(135deg, #fff, #BDEBFD, #fff);
   position: relative;
   min-height: 100vh;
 }

@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  background: linear-gradient(135deg, #030044, #0B0E16, #04031D);
+  background: linear-gradient(135deg, #fff, #BDEBFD, #fff);
   color: #fff;
   position: relative;
   min-height: 100vh;
@@ -42,7 +42,7 @@ img {
   height: 100vh;
   text-decoration: none;
 
-  background: #05032A;
+   background: #D0EEFB;
 
   display: flex;
   flex-direction: column;
@@ -93,7 +93,7 @@ img {
   align-items: center;
   gap: 0.9375rem;
 
-  background: #1C1A46;
+  background: #A1DCE6B2;
   border-radius: 0.625rem;
 
   padding: 0.75rem;
@@ -137,7 +137,7 @@ img {
 }
 
 .item-menu:hover {
-  background: #1C1A46;
+   background: #A1DCE6B2;
 }
 
 .item-menu img {
@@ -169,7 +169,7 @@ img {
   align-items: center;
   gap: 0.9375rem;
 
-  background: #1C1A46;
+  background: #A1DCE6B2;
   padding: 0.75rem;
   border-radius: 0.625rem;
 }
@@ -225,7 +225,7 @@ img {
 }
 
 .item-menu:hover {
-  background: #1C1A46;
+  background: #A1DCE6B2;
 }
 
 .item-menu img {
@@ -251,7 +251,7 @@ h1{
 }
 
 h1{
-  color: #FFF;
+  color: #04031D;
   font-family: Montserrat;
   font-size: 54px;
   font-style: normal;
@@ -283,7 +283,7 @@ h1{
   position: absolute;
   background: transparent;
   border: none;
-  color: #96F6FF;
+  color: ##04031D;
   font-family: Montserrat;
   font-size: 16px;
   font-weight: 600;
@@ -325,7 +325,7 @@ h1{
 
 
 h3{
-  color: #04031D;
+  color: #FFF;
   font-family: Montserrat;
   font-size: 32px;
   font-style: normal;
@@ -340,7 +340,7 @@ h3{
 }
 
 .info{
-  background: #E3F1F3;
+  background: #04031D;
   width: 100%;
   height: 200px;
   margin-top: 150px;
@@ -353,7 +353,7 @@ h3{
   gap: 15px;          
   margin-left: 350px;
   margin-top: 20px;
-  color: #04031D;
+  color: #FFF;
   padding-top: 30px;
 }
 
@@ -363,7 +363,7 @@ h3{
 
 .item-info p{
   margin: 0;
-  color: #04031D;
+  color: #FFF;
   font-family: Montserrat;
   font-size: 20px;
   font-style: normal;
