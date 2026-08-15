@@ -1,3 +1,8 @@
+@import "../colors.css";
+/* =========================================================
+   CONFIGURAÇÕES GERAIS
+========================================================= */
+
 * {
   margin: 0;
   padding: 0;
@@ -10,8 +15,10 @@ html {
 }
 
 body {
-  background: linear-gradient(180deg, #FFF 0%, #BDEBFD 56.25%, #FFF 100%);
-  color: #1C1A46;
+  background: linear-gradient(180deg, var(--cor-texto) 0%, var(--cor-15) 56.25%, var(--cor-texto) 100%);
+
+  color: var(--cor-elemento);
+
   position: relative;
   min-height: 100vh;
 }
@@ -22,31 +29,49 @@ body {
   margin-inline: auto;
 }
 
-/* ---------- ANIMAÇÕES ---------- */
+
+/* =========================================================
+   ANIMAÇÕES
+========================================================= */
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(2rem); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* ---------- IMAGENS ---------- */
+
+/* =========================================================
+   IMAGENS
+========================================================= */
 
 img {
   max-width: 100%;
   display: block;
 }
 
-/* ---------- MENU ---------- */
+
+/* =========================================================
+   MENU
+========================================================= */
 
 .menu {
   position: fixed;
   top: 0;
   left: 0;
+
   width: 4.6875rem;
   height: 100vh;
+
   text-decoration: none;
 
-  background: #D0EEFB;
+  background: var(--cor-13);
 
   display: flex;
   flex-direction: column;
@@ -64,11 +89,15 @@ img {
   width: 16.25rem;
 }
 
-/* ---------- LOGO ---------- */
+
+/* =========================================================
+   LOGO
+========================================================= */
 
 .logo {
   display: flex;
   align-items: center;
+
   gap: 0.9375rem;
   margin-bottom: 2.5rem;
 }
@@ -80,6 +109,7 @@ img {
 .logo span {
   font-size: 2rem;
   font-weight: 700;
+
   white-space: nowrap;
 
   opacity: 0;
@@ -90,14 +120,19 @@ img {
   opacity: 1;
 }
 
-/* ---------- PESQUISA ---------- */
+
+/* =========================================================
+   PESQUISA
+========================================================= */
 
 .pesquisa {
   display: flex;
   align-items: center;
+
   gap: 0.9375rem;
 
   background: rgba(161, 220, 230, 0.70);
+
   border-radius: 0.625rem;
 
   padding: 0.75rem;
@@ -110,6 +145,7 @@ img {
 
 .pesquisa span {
   white-space: nowrap;
+
   opacity: 0;
   transition: .3s;
 }
@@ -118,12 +154,15 @@ img {
   opacity: 1;
 }
 
-/* ---------- ITENS ---------- */
-/* ---------- ITENS ---------- */
+
+/* =========================================================
+   ITENS DO MENU
+========================================================= */
 
 .item-menu {
   display: flex;
   align-items: center;
+
   gap: 1.125rem;
 
   width: 100%;
@@ -137,34 +176,42 @@ img {
   transition: .3s ease;
 
   text-decoration: none;
-  color: #040140;
+
+  color: var(--cor-01);
 }
 
 .item-menu:hover {
-  background: #A1DCE6;
+  background: var(--cor-06);
 }
 
 .item-menu img {
   width: 1.75rem;
   height: 1.75rem;
+
   object-fit: contain;
   flex-shrink: 0;
 }
 
 .item-menu span {
   white-space: nowrap;
+
   opacity: 0;
   transition: .3s ease;
+
   font-size: 1rem;
   font-weight: 500;
-  color: #040140;
+
+  color: var(--cor-01);
 }
 
 .menu:hover .item-menu span {
   opacity: 1;
 }
 
-/* ---------- USUÁRIO ---------- */
+
+/* =========================================================
+   USUÁRIO
+========================================================= */
 
 .usuario {
   margin-top: auto;
@@ -172,10 +219,13 @@ img {
 
   display: flex;
   align-items: center;
+
   gap: 0.9375rem;
 
   background: rgba(161, 220, 230, 0.70);
+
   padding: 0.75rem;
+
   border-radius: 0.625rem;
 }
 
@@ -201,22 +251,30 @@ img {
 .dados-usuario p {
   font-size: 0.7rem;
   font-weight: 400;
-  color: #040140;
+
+  color: var(--cor-01);
+
   opacity: 0.6;
+
   margin: 0.25rem 0 0 0;
+
   width: auto;
   height: auto;
 }
 
-/* ---------- TEMA ---------- */
+
+/* =========================================================
+   TEMA
+========================================================= */
 
 .menu:hover .item-menu {
   opacity: 1;
 }
 
-.item-menu{ 
+.item-menu {
   display: flex;
   align-items: center;
+
   gap: 1.125rem;
 
   width: 100%;
@@ -230,7 +288,8 @@ img {
   transition: .3s ease;
 
   text-decoration: none;
-  color: #fff;
+
+  color: var(--cor-texto);
 }
 
 .item-menu:hover {
@@ -240,261 +299,345 @@ img {
 .item-menu img {
   width: 2rem;
   height: 1.75rem;
+
   object-fit: contain;
   flex-shrink: 0;
 }
 
 .item-menu span {
   white-space: nowrap;
+
   opacity: 0;
   transition: .3s ease;
+
   font-size: 1rem;
   font-weight: 500;
 }
 
-/* ---------- INÍCIO DO CSS EQUIPE  ---------- */
+
+/* =========================================================
+   INÍCIO DO CSS EQUIPE
+========================================================= */
+
+
 /* ---------- TÍTULO ---------- */
 
 .titulo {
   width: 788px;
   height: 59px;
+
   aspect-ratio: 788/59;
 }
 
-.titulo, h1{
-  color: #040140;
+.titulo,
+h1 {
+  color: var(--cor-01);
+
   font-family: Montserrat;
+
   font-size: 48px;
+
   font-style: normal;
+
   font-weight: 700;
+
   line-height: normal;
+
   margin-left: 66px;
   margin-top: 240px;
 }
 
+
 /* ---------- DESCRIÇÃO DO TÍTULO ---------- */
-#descricao{
+
+#descricao {
   width: 680px;
-  margin-top: 10px
-}
 
-#descricao{
-  color: #040140;
+  margin-top: 10px;
+
+  color: (--cor-01);
+
   font-family: Montserrat;
+
   font-size: 16px;
+
   font-style: normal;
+
   font-weight: 450;
+
   line-height: normal;
+
   margin-left: 130px;
 }
 
-p{
-  color: #FFF;
+p {
+  color: (--cor-01);
+
   font-family: Montserrat;
+
   font-size: 16px;
+
   font-style: normal;
+
   font-weight: 400;
+
   line-height: normal;
+
   margin-left: 130px;
 }
 
-/* ---------- IMAGENS DA EQUIPE ---------- */
 
-.linha-meninas{
-    display: flex;
-    gap: 100px; 
-    margin-top: 119px;
-    
+/* =========================================================
+   IMAGENS DA EQUIPE
+========================================================= */
+
+.linha-meninas {
+  display: flex;
+
+  gap: 100px;
+
+  margin-top: 119px;
 }
 
 .info-card p,
-.info-card h4{
-  color: #E3F1F3;
+.info-card h4 {
+  color:  var(--cor-14);
+
   padding-left: 15px;
 }
 
-.info-card h4{
+.info-card h4 {
   font-weight: 600;
 }
 
-.card{
+.card {
   width: 300px;
-
 }
 
-.card img{
+.card img {
   width: 300px;
+
   display: block;
+
   border-radius: 20px 20px 0 0;
 }
 
-.info-card{
+.info-card {
   width: 300px;
-  background: #04031D;
+
+  background: var(--cor-fundo-3);
+
   border-radius: 0 0 20px 20px;
+
   padding: 15px 0;
-  
 }
 
 .info-card p,
-.info-card h4{
+.info-card h4 {
   margin: 0;
-  background: none; 
+
+  background: none;
 }
 
-.info-card p{
+.info-card p {
   font-size: 12px;
 }
 
-#geo{
-  margin-left: 185px
+#geo {
+  margin-left: 185px;
 }
 
-#lia{
+#lia {
   margin-right: 130px;
 }
 
 #guilherme {
-  margin-left: 361px
+  margin-left: 361px;
 }
 
-#enzo{
+#enzo {
   margin-right: 283px;
 }
 
-.linha-meninos{
-    display: flex;
-    gap: 120px;
-    margin-top: 150px;
+.linha-meninos {
+  display: flex;
+
+  gap: 120px;
+
+  margin-top: 150px;
 }
 
-.card{
+.card {
   width: 300px;
   height: 350px;
 }
 
-}
 
-/* ---------- CONTATE-NOS  ---------- */
-.informacao{
+/* =========================================================
+   CONTATE-NOS
+========================================================= */
+
+.informacao {
   display: flex;
+
   flex-direction: column;
+
   align-items: flex-start;
 }
 
-h2{
-  color: #04031D;
+h2 {
+  color:  var(--cor-fundo-3);
+
   font-family: Montserrat;
-  font-size: 54px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
-  margin-top: 100px;
-  color: #04031D;
-  font-family: Montserrat;
+
   font-size: 60px;
+
   font-style: normal;
+
   font-weight: 100;
+
   line-height: normal;
+
+  margin-top: 100px;
 }
 
-.informacao label{
+.informacao label {
   display: block;
+
   margin-top: 15px;
 }
 
-textarea{
-    height: 40px;
+textarea {
+  height: 40px;
 }
 
 .informacao input,
-.informacao textarea{
+.informacao textarea {
   display: block;
+
   width: 946px;
+
   margin-bottom: 15px;
-  background: transparent;   
-  border: none;             
-  border-bottom: 1px solid #6f6e8c; 
-  outline: none;            
-  color: #04031D;
+
+  background: transparent;
+
+  border: none;
+
+
+  border-bottom: 1px solid var(--cor-02);
+
+  outline: none;
+
+  color: var(--cor-fundo-3);
+
   padding: 8px 0;
-  margin-top: 8px;           
-  margin-bottom: 20px; 
+
+  margin-top: 8px;
+
+  margin-bottom: 20px;
 }
 
-.contate-nos{
-  margin-left: 230px; 
+.contate-nos {
+  margin-left: 230px;
+
   margin-top: 200px;
 }
 
-button{
+
+/* =========================================================
+   BOTÃO
+========================================================= */
+
+button {
   width: 232px;
   height: 61px;
-  background: #04031D;
+
+  background: var(--cor-fundo-3);
+
   border: none;
-  color: #FFF;
+
+  color: var(--cor-14);
+
   font-family: Montserrat;
+
   font-size: 20px;
+
   font-style: normal;
+
   font-weight: 550;
+
   line-height: normal;
-  margin-top: 40px
+
+  margin-top: 40px;
 }
 
 
-/* ---------- INFORMACOES  ---------- */
+/* =========================================================
+   INFORMAÇÕES
+========================================================= */
 
+h3 {
+  color: var(--cor-texto);
 
-h3{
-  color: #FFF;
   font-family: Montserrat;
+
   font-size: 32px;
+
   font-style: normal;
+
   font-weight: 500;
+
   line-height: normal;
-}
 
-
-h3{
   margin-left: 230px;
-   padding-top: 30px;
-}
 
-.info{
-  background: #04031D;
-  width: 100%;
-  height: 200px;
-  margin-top: 150px;
-  margin-bottom: 300px;
-}
-
-.item-info{
-  display: flex;
-  align-items: center;
-  gap: 15px;          
-  margin-left: 350px;
-  margin-top: 20px;
-  color: #FFF;;
   padding-top: 30px;
 }
 
-.item-info i:not(:first-child){
-  margin-left: 50px; 
+.info {
+  background: var(--cor-fundo-3);
+
+  width: 100%;
+
+  height: 200px;
+
+  margin-top: 150px;
+
+  margin-bottom: 300px;
 }
 
-.item-info p{
+.item-info {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-left: 350px;
+
+  margin-top: 20px;
+
+  color: var(--cor-14);
+
+  padding-top: 30px;
+}
+
+.item-info i:not(:first-child) {
+  margin-left: 50px;
+}
+
+.item-info p {
   margin: 0;
-  color: color: #FFF;;
+
+  color: var(--cor-14);
+
   font-family: Montserrat;
+
   font-size: 20px;
+
   font-style: normal;
+
   font-weight: 400;
+
   line-height: normal;
 }
-
-
-  
-
-
-
-

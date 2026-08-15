@@ -1,3 +1,5 @@
+@import "../colors.css";
+
 /* ---------- CSS DO MENU ---------- */
 
 * {
@@ -5,7 +7,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
-  color: #000;
+  color: var(--cor-08);
 }
 
 html {
@@ -13,8 +15,8 @@ html {
 }
 
 body {
-  background: linear-gradient(135deg, #ffffff, #BDEBFD, #ffffff);
-  color: #fff;
+  background: linear-gradient(135deg, var(--cor-texto), var(--cor-15), var(--cor-texto));
+  color: var(--cor-texto);
   position: relative;
   min-height: 100vh;
 }
@@ -43,7 +45,7 @@ img {
   height: 100vh;
   text-decoration: none;
 
-  background: #D0EEFB;
+  background: var(--cor-13);
 
   display: flex;
   flex-direction: column;
@@ -94,7 +96,7 @@ img {
   align-items: center;
   gap: 0.9375rem;
 
-  background: #A1DCE6B2;
+  background: rgba(161, 220, 230, 0.70);
   border-radius: 0.625rem;
   opacity: 70%;
 
@@ -135,11 +137,11 @@ img {
   transition: .3s ease;
 
   text-decoration: none;
-  color: #1C1A46;
+  color: var(--cor-elemento);
 }
 
 .item-menu:hover {
-  background: #D0EEFB;
+  background: var(--cor-13);
 }
 
 .item-menu img {
@@ -171,7 +173,7 @@ img {
   align-items: center;
   gap: 0.9375rem;
 
-  background: #A1DCE6B2;
+  background: rgba(161, 220, 230, 0.70);
   padding: 0.75rem;
   border-radius: 0.625rem;
 }
@@ -211,7 +213,7 @@ img {
   opacity: 1;
 }
 
-.item-menu{ 
+.item-menu { 
   display: flex;
   align-items: center;
   gap: 1.125rem;
@@ -227,11 +229,11 @@ img {
   transition: .3s ease;
 
   text-decoration: none;
-  color: #fff;
+  color: var(--cor-texto);
 }
 
 .item-menu:hover {
-  background: #A1DCE6B2;
+  background: rgba(161, 220, 230, 0.70);
 }
 
 .item-menu img {
@@ -250,6 +252,7 @@ img {
 }
 
 /* ---------- TÍTULO ---------- */
+
 .h1 {
   display: flex;
   align-items: center;
@@ -274,6 +277,7 @@ img {
 }
 
 /*----------- VÍDEO -----------*/
+
 .video {
   width: 100%;
   margin: 4rem auto;

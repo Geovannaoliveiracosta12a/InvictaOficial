@@ -1,3 +1,5 @@
+@import "../colors.css";
+
 /* ---------- CSS DO MENU ---------- */
 
 * {
@@ -5,7 +7,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
-  
+
 }
 
 html {
@@ -13,8 +15,8 @@ html {
 }
 
 body {
-  background: linear-gradient(135deg, #fff, #BDEBFD, #fff);
-  color: #fff;
+  background: linear-gradient(135deg, var(--cor-texto), var(--cor-15), var(--cor-texto));
+  color: var(--cor-texto);
   position: relative;
   min-height: 100vh;
 }
@@ -43,7 +45,7 @@ img {
   height: 100vh;
   text-decoration: none;
 
-   background: #D0EEFB;
+   background: var(--cor-13);
 
   display: flex;
   flex-direction: column;
@@ -78,6 +80,7 @@ img {
   font-size: 2rem;
   font-weight: 700;
   white-space: nowrap;
+  color: var(--cor-01);
 
   opacity: 0;
   transition: .3s;
@@ -93,7 +96,7 @@ img {
   display: flex;
   align-items: center;
   gap: 0.9375rem;
-  color: black;
+  color: var(--cor-08);
 
   background: #A1DCE6B2;
   border-radius: 0.625rem;
@@ -135,11 +138,11 @@ img {
   transition: .3s ease;
 
   text-decoration: none;
-  color: #000;
+  color: var(--cor-08);
 }
 
 .item-menu:hover {
-   background: #A1DCE6B2;
+   background: var(--cor-06);
 }
 
 .item-menu img {
@@ -171,7 +174,7 @@ img {
   align-items: center;
   gap: 0.9375rem;
 
-  background: #A1DCE6B2;
+  background: var(--cor-06);
   padding: 0.75rem;
   border-radius: 0.625rem;
 }
@@ -193,12 +196,13 @@ img {
 .dados-usuario h4 {
   font-size: .9rem;
   margin: 0;
+  color: var(--cor-01);
 }
 
 .dados-usuario p {
   font-size: 0.7rem;
   font-weight: 400;
-  color: #040140;
+  color: var(--cor-01);
   opacity: 0.6;
   margin: 0.25rem 0 0 0;
   width: auto;
@@ -227,11 +231,11 @@ img {
   transition: .3s ease;
 
   text-decoration: none;
-  color: #000;
+  color: var(--cor-08);
 }
 
 .item-menu:hover {
-  background: #A1DCE6B2;
+  background: var(--cor-06);
 }
 
 .item-menu img {
@@ -257,7 +261,7 @@ h1{
 }
 
 h1{
-  color: #04031D;
+  color: var(--cor-01);
   font-family: Montserrat;
   font-size: 54px;
   font-style: normal;
@@ -289,7 +293,7 @@ h1{
   position: absolute;
   background: transparent;
   border: none;
-  color: #04031D;
+  color: var(--cor-01);
   font-family: Montserrat;
   font-size: 16px;
   font-weight: 600;
@@ -331,7 +335,7 @@ h1{
 
 
 h3{
-  color: #040140;
+  color: var(--cor-14);
   font-family: Montserrat;
   font-size: 32px;
   font-style: normal;
@@ -346,7 +350,7 @@ h3{
 }
 
 .info{
-  background: #04031D;
+  background: var(--cor-01);
   width: 100%;
   height: 200px;
   margin-top: 150px;
@@ -359,7 +363,7 @@ h3{
   gap: 15px;          
   margin-left: 350px;
   margin-top: 20px;
-  color: #FFF;
+  color: var(--cor-texto);
   padding-top: 30px;
 }
 
@@ -369,7 +373,7 @@ h3{
 
 .item-info p{
   margin: 0;
-  color: #FFF;
+  color: var(--cor-texto);
   font-family: Montserrat;
   font-size: 20px;
   font-style: normal;
