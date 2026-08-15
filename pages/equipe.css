@@ -1,3 +1,5 @@
+@import "../colors.css";
+
 * {
   margin: 0;
   padding: 0;
@@ -10,14 +12,19 @@ html {
 }
 
 body {
-  background: linear-gradient(135deg, #030044, #0B0E16, #04031D);
-  color: #fff;
+  background: linear-gradient(
+    135deg,
+    var(--cor-fundo-1),
+    var(--cor-fundo-2),
+    var(--cor-fundo-3)
+  );
+
+  color: var(--cor-texto);
   position: relative;
   min-height: 100vh;
 }
 
 #page {
-  /* border: 1px solid red; */
   max-width: 1300px;
   margin-inline: auto;
 }
@@ -25,8 +32,15 @@ body {
 /* ---------- ANIMAÇÕES ---------- */
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(2rem); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ---------- IMAGENS ---------- */
@@ -46,7 +60,7 @@ img {
   height: 100vh;
   text-decoration: none;
 
-  background: #05032A;
+  background: var(--cor-menu);
 
   display: flex;
   flex-direction: column;
@@ -97,7 +111,7 @@ img {
   align-items: center;
   gap: 0.9375rem;
 
-  background: #1C1A46;
+  background: var(--cor-elemento);
   border-radius: 0.625rem;
 
   padding: 0.75rem;
@@ -119,7 +133,6 @@ img {
 }
 
 /* ---------- ITENS ---------- */
-/* ---------- ITENS ---------- */
 
 .item-menu {
   display: flex;
@@ -137,11 +150,11 @@ img {
   transition: .3s ease;
 
   text-decoration: none;
-  color: #fff;
+  color: var(--cor-texto);
 }
 
 .item-menu:hover {
-  background: #1C1A46;
+  background: var(--cor-elemento);
 }
 
 .item-menu img {
@@ -173,7 +186,7 @@ img {
   align-items: center;
   gap: 0.9375rem;
 
-  background: #1C1A46;
+  background: var(--cor-elemento);
   padding: 0.75rem;
   border-radius: 0.625rem;
 }
@@ -199,7 +212,7 @@ img {
 
 .dados-usuario p {
   font-size: .7rem;
-  color: #bdbdbd;
+  color: var(--cor-texto-terciario);
   margin: 0.25rem 0 0 0;
 }
 
@@ -209,45 +222,8 @@ img {
   opacity: 1;
 }
 
-.item-menu{ 
-  display: flex;
-  align-items: center;
-  gap: 1.125rem;
+/* ---------- INÍCIO DO CSS EQUIPE ---------- */
 
-  width: 100%;
-
-  padding: 0.75rem;
-  margin-bottom: 0.5rem;
-
-  border-radius: 0.625rem;
-
-  cursor: pointer;
-  transition: .3s ease;
-
-  text-decoration: none;
-  color: #fff;
-}
-
-.item-menu:hover {
-  background: #1C1A46;
-}
-
-.item-menu img {
-  width: 2rem;
-  height: 1.75rem;
-  object-fit: contain;
-  flex-shrink: 0;
-}
-
-.item-menu span {
-  white-space: nowrap;
-  opacity: 0;
-  transition: .3s ease;
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-/* ---------- INÍCIO DO CSS EQUIPE  ---------- */
 /* ---------- TÍTULO ---------- */
 
 .titulo {
@@ -256,8 +232,9 @@ img {
   aspect-ratio: 788/59;
 }
 
-.titulo, h1{
-  color: #FFF;
+.titulo,
+h1 {
+  color: var(--cor-texto);
   font-family: Montserrat;
   font-size: 48px;
   font-style: normal;
@@ -268,13 +245,12 @@ img {
 }
 
 /* ---------- DESCRIÇÃO DO TÍTULO ---------- */
-#descricao{
+
+#descricao {
   width: 680px;
   margin-top: 10px;
-}
 
-#descricao{
-  color: #FFF;
+  color: var(--cor-texto);
   font-family: Montserrat;
   font-size: 16px;
   font-style: normal;
@@ -285,137 +261,127 @@ img {
 
 /* ---------- IMAGENS DA EQUIPE ---------- */
 
-.linha-meninas{
-    display: flex;
-    gap: 100px; 
-    margin-top: 119px;
-    
+.linha-meninas {
+  display: flex;
+  gap: 100px;
+  margin-top: 119px;
 }
 
 .info-card p,
-.info-card h4{
+.info-card h4 {
   color: #000000;
   padding-left: 15px;
 }
 
-.info-card h4{
+.info-card h4 {
   font-weight: 600;
 }
 
-.card{
+.card {
   width: 300px;
-
 }
 
-.card img{
+.card img {
   width: 300px;
   display: block;
   border-radius: 20px 20px 0 0;
 }
 
-.info-card{
+.info-card {
   width: 300px;
   background: #E3F1F3;
   border-radius: 0 0 20px 20px;
   padding: 15px 0;
-  
 }
 
 .info-card p,
-.info-card h4{
+.info-card h4 {
   margin: 0;
-  background: none; 
+  background: none;
 }
 
-.info-card p{
+.info-card p {
   font-size: 12px;
 }
 
-#geo{
-  margin-left: 185px
+#geo {
+  margin-left: 185px;
 }
 
-#lia{
+#lia {
   margin-right: 130px;
 }
 
 #guilherme {
-  margin-left: 361px
+  margin-left: 361px;
 }
 
-#enzo{
+#enzo {
   margin-right: 283px;
 }
 
-.linha-meninos{
-    display: flex;
-    gap: 120px;
-    margin-top: 150px;
+.linha-meninos {
+  display: flex;
+  gap: 120px;
+  margin-top: 150px;
 }
 
-.card{
+.card {
   width: 300px;
   height: 350px;
 }
 
-}
+/* ---------- CONTATE-NOS ---------- */
 
-/* ---------- CONTATE-NOS  ---------- */
-.informacao{
+.informacao {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-h2{
-  color: #FFF;
-  font-family: Montserrat;
-  font-size: 54px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
-  margin-top: 100px;
+h2 {
   color: #CECECE;
   font-family: Montserrat;
   font-size: 60px;
   font-style: normal;
   font-weight: 100;
   line-height: normal;
+  margin-top: 100px;
 }
 
-.informacao label{
+.informacao label {
   display: block;
   margin-top: 15px;
 }
 
-textarea{
-    height: 40px;
+textarea {
+  height: 40px;
 }
 
 .informacao input,
-.informacao textarea{
+.informacao textarea {
   display: block;
   width: 946px;
   margin-bottom: 15px;
-  background: transparent;   
-  border: none;             
-  border-bottom: 1px solid #CECECE; 
-  outline: none;            
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #CECECE;
+  outline: none;
   color: #CECECE;
   padding: 8px 0;
-  margin-top: 8px;           
-  margin-bottom: 20px; 
+  margin-top: 8px;
+  margin-bottom: 20px;
 }
 
-.contate-nos{
-  margin-left: 230px; 
+.contate-nos {
+  margin-left: 230px;
   margin-top: 200px;
 }
 
-button{
+button {
   width: 232px;
   height: 61px;
-  background: #FFF;
+  background: var(--cor-texto);
   border: none;
   color: #000;
   font-family: Montserrat;
@@ -423,29 +389,23 @@ button{
   font-style: normal;
   font-weight: 550;
   line-height: normal;
-  margin-top: 40px
+  margin-top: 40px;
 }
 
+/* ---------- INFORMACOES ---------- */
 
-/* ---------- INFORMACOES  ---------- */
-
-
-h3{
-  color: #04031D;
+h3 {
+  color: var(--cor-fundo-3);
   font-family: Montserrat;
   font-size: 32px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-}
-
-
-h3{
   margin-left: 230px;
-   padding-top: 30px;
+  padding-top: 30px;
 }
 
-.info{
+.info {
   background: #E3F1F3;
   width: 100%;
   height: 200px;
@@ -453,33 +413,26 @@ h3{
   margin-bottom: 300px;
 }
 
-.item-info{
+.item-info {
   display: flex;
   align-items: center;
-  gap: 15px;          
+  gap: 15px;
   margin-left: 350px;
   margin-top: 20px;
-  color: #04031D;
+  color: var(--cor-fundo-3);
   padding-top: 30px;
 }
 
-.item-info i:not(:first-child){
-  margin-left: 50px; 
+.item-info i:not(:first-child) {
+  margin-left: 50px;
 }
 
-.item-info p{
+.item-info p {
   margin: 0;
-  color: #04031D;
+  color: var(--cor-fundo-3);
   font-family: Montserrat;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
-
-
-  
-
-
-
-

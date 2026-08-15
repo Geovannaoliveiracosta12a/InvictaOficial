@@ -1,3 +1,5 @@
+@import "../colors.css";
+
 /* ---------- CSS DO MENU ---------- */
 
 * {
@@ -12,8 +14,14 @@ html {
 }
 
 body {
-  background: linear-gradient(135deg, #030044, #0B0E16, #04031D);
-  color: #fff;
+  background: linear-gradient(
+    135deg,
+    var(--cor-fundo-1),
+    var(--cor-fundo-2),
+    var(--cor-fundo-3)
+  );
+
+  color: var(--cor-texto);
   position: relative;
   min-height: 100vh;
 }
@@ -21,8 +29,15 @@ body {
 /* ---------- ANIMAÇÕES ---------- */
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(2rem); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ---------- IMAGENS ---------- */
@@ -38,11 +53,13 @@ img {
   position: fixed;
   top: 0;
   left: 0;
+
   width: 4.6875rem;
   height: 100vh;
+
   text-decoration: none;
 
-  background: #05032A;
+  background: var(--cor-menu);
 
   display: flex;
   flex-direction: column;
@@ -93,7 +110,8 @@ img {
   align-items: center;
   gap: 0.9375rem;
 
-  background: #1C1A46;
+  background: var(--cor-elemento);
+
   border-radius: 0.625rem;
 
   padding: 0.75rem;
@@ -115,7 +133,6 @@ img {
 }
 
 /* ---------- ITENS ---------- */
-/* ---------- ITENS ---------- */
 
 .item-menu {
   display: flex;
@@ -133,16 +150,17 @@ img {
   transition: .3s ease;
 
   text-decoration: none;
-  color: #fff;
+  color: var(--cor-texto);
 }
 
 .item-menu:hover {
-  background: #1C1A46;
+  background: var(--cor-elemento);
 }
 
 .item-menu img {
   width: 1.75rem;
   height: 1.75rem;
+
   object-fit: contain;
   flex-shrink: 0;
 }
@@ -150,7 +168,9 @@ img {
 .item-menu span {
   white-space: nowrap;
   opacity: 0;
+
   transition: .3s ease;
+
   font-size: 1rem;
   font-weight: 500;
 }
@@ -169,7 +189,8 @@ img {
   align-items: center;
   gap: 0.9375rem;
 
-  background: #1C1A46;
+  background: var(--cor-elemento);
+
   padding: 0.75rem;
   border-radius: 0.625rem;
 }
@@ -195,7 +216,9 @@ img {
 
 .dados-usuario p {
   font-size: .7rem;
-  color: #bdbdbd;
+
+  color: var(--cor-texto-terciario);
+
   margin: 0.25rem 0 0 0;
 }
 
@@ -205,7 +228,7 @@ img {
   opacity: 1;
 }
 
-.item-menu{ 
+.item-menu {
   display: flex;
   align-items: center;
   gap: 1.125rem;
@@ -221,16 +244,17 @@ img {
   transition: .3s ease;
 
   text-decoration: none;
-  color: #fff;
+  color: var(--cor-texto);
 }
 
 .item-menu:hover {
-  background: #1C1A46;
+  background: var(--cor-elemento);
 }
 
 .item-menu img {
   width: 2rem;
   height: 1.75rem;
+
   object-fit: contain;
   flex-shrink: 0;
 }
@@ -238,20 +262,23 @@ img {
 .item-menu span {
   white-space: nowrap;
   opacity: 0;
+
   transition: .3s ease;
+
   font-size: 1rem;
   font-weight: 500;
 }
 
-/* ---------- INICIO DE REFERENCIAS ---------- */
-h1{
-  text-align: center;
-  margin-top: 30px;
-  margin-top: 114px;-
-}
+/* ---------- INÍCIO DE REFERÊNCIAS ---------- */
 
-h1{
-  color: #FFF;
+h1 {
+  text-align: center;
+
+  margin-top: 114px;
+  margin-bottom: 0;
+
+  color: var(--cor-texto);
+
   font-family: Montserrat;
   font-size: 54px;
   font-style: normal;
@@ -259,18 +286,19 @@ h1{
   line-height: normal;
 }
 
-/*--------- REFERÊNCIAS ----------*/
+/* ---------- REFERÊNCIAS ---------- */
 
 #img-ref {
-    display: block;
-    margin: 65px auto 0;
+  display: block;
+  margin: 65px auto 0;
 }
 
-/*--------- BOTOES ----------*/
+/* ---------- BOTÕES ---------- */
 
 .referencias-img {
   position: relative;
   width: fit-content;
+
   margin: 65px auto 0;
 }
 
@@ -281,12 +309,16 @@ h1{
 
 .referencias-img button {
   position: absolute;
+
   background: transparent;
   border: none;
-  color: #96F6FF;
+
+  color: var(--cor-destaque-hover);
+
   font-family: Montserrat;
   font-size: 16px;
   font-weight: 600;
+
   cursor: pointer;
 }
 
@@ -320,50 +352,54 @@ h1{
   right: 145px;
 }
 
+/* ---------- INFORMAÇÕES ---------- */
 
-/* ---------- INFORMACOES  ---------- */
+h3 {
+  color: var(--cor-fundo-3);
 
-
-h3{
-  color: #04031D;
   font-family: Montserrat;
   font-size: 32px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-}
 
-
-h3{
   margin-left: 230px;
-   padding-top: 30px;
+  padding-top: 30px;
 }
 
-.info{
-  background: #E3F1F3;
+.info {
+  background: var(--cor-texto-secundario);
+
   width: 100%;
   height: 200px;
+
   margin-top: 150px;
   margin-bottom: 300px;
 }
 
-.item-info{
+.item-info {
   display: flex;
   align-items: center;
-  gap: 15px;          
+
+  gap: 15px;
+
   margin-left: 350px;
   margin-top: 20px;
-  color: #04031D;
+
+  color: var(--cor-fundo-3);
+
   padding-top: 30px;
 }
 
-.item-info i:not(:first-child){
-  margin-left: 50px; 
+.item-info i:not(:first-child) {
+  margin-left: 50px;
 }
 
-.item-info p{
+.item-info p {
   margin: 0;
-  color: #04031D;
+
+  color: var(--cor-fundo-3);
+
   font-family: Montserrat;
   font-size: 20px;
   font-style: normal;

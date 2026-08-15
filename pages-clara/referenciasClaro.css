@@ -196,10 +196,13 @@ img {
 }
 
 .dados-usuario p {
-  font-size: .7rem;
-  color: #000;
-  opacity: 60%;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: #040140;
+  opacity: 0.6;
   margin: 0.25rem 0 0 0;
+  width: auto;
+  height: auto;
 }
 
 /* ---------- TEMA ---------- */
@@ -328,7 +331,7 @@ h1{
 
 
 h3{
-  color: #FFF;
+  color: #040140;
   font-family: Montserrat;
   font-size: 32px;
   font-style: normal;

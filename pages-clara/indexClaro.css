@@ -1,3 +1,4 @@
+@import "./colors.css";
 * {
   margin: 0;
   padding: 0;
@@ -208,9 +209,13 @@ img {
 }
 
 .dados-usuario p {
-  font-size: .7rem;
-  color: #bdbdbd;
-  margin-top: 0.25rem;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: #040140;
+  opacity: 0.6;
+  margin: 0.25rem 0 0 0;
+  width: auto;
+  height: auto;
 }
 
 /* ---------- TEMA ---------- */
