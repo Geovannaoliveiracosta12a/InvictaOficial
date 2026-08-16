@@ -1,3 +1,5 @@
+@import "../colors.css";
+
 * {
   margin: 0;
   padding: 0;
@@ -10,36 +12,77 @@ html {
 }
 
 body {
-  background: linear-gradient(135deg, #030044, #0B0E16, #04031D);
-  color: #fff;
+  background: linear-gradient(
+    135deg,
+    var(--cor-14),
+    var(--cor-15),
+    var(--cor-14)
+  );
+
+  color: var(--cor-01);
+
   position: relative;
   min-height: 100vh;
+
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+body.entrando {
+  opacity: 1;
+}
+
+body.saindo {
+  opacity: 0;
 }
 
 
-/*mão de marcinho para definir a largura da tela*/
+/* ---------- LARGURA DA TELA ---------- */
+
 #page {
-  /* border: 1px solid red; */
   max-width: 1300px;
   margin-inline: auto;
 }
 
+
 /* ---------- ANIMAÇÕES ---------- */
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(2rem); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeInRight {
-  from { opacity: 0; transform: translateX(2rem); }
-  to   { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(2rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes fadeInLeft {
-  from { opacity: 0; transform: translateX(-2rem); }
-  to   { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(-2rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
+
 
 /* ---------- IMAGENS ---------- */
 
@@ -48,17 +91,21 @@ img {
   display: block;
 }
 
+
 /* ---------- MENU ---------- */
 
 .menu {
   position: fixed;
+
   top: 0;
   left: 0;
+
   width: 4.6875rem;
   height: 100vh;
+
   text-decoration: none;
 
-  background: #05032A;
+  background: var(--cor-06);
 
   display: flex;
   flex-direction: column;
@@ -66,22 +113,29 @@ img {
   padding: 1.25rem 0.9375rem;
 
   overflow: hidden;
+
   transition: .35s ease;
 
   border-radius: 0 1.25rem 1.25rem 0;
+
   z-index: 999;
+
+  box-shadow: 0 0 1rem rgba(4, 3, 29, 0.12);
 }
 
 .menu:hover {
   width: 16.25rem;
 }
 
+
 /* ---------- LOGO ---------- */
 
 .logo {
   display: flex;
   align-items: center;
+
   gap: 0.9375rem;
+
   margin-bottom: 2.5rem;
 }
 
@@ -92,27 +146,35 @@ img {
 .logo span {
   font-size: 2rem;
   font-weight: 700;
+
   white-space: nowrap;
 
   opacity: 0;
+
   transition: .3s;
+
+  color: var(--cor-01);
 }
 
 .menu:hover .logo span {
   opacity: 1;
 }
 
+
 /* ---------- PESQUISA ---------- */
 
 .pesquisa {
   display: flex;
   align-items: center;
+
   gap: 0.9375rem;
 
-  background: #1C1A46;
+  background: var(--cor-13);
+
   border-radius: 0.625rem;
 
   padding: 0.75rem;
+
   margin-bottom: 1.5625rem;
 }
 
@@ -122,51 +184,64 @@ img {
 
 .pesquisa span {
   white-space: nowrap;
+
   opacity: 0;
+
   transition: .3s;
+
+  color: var(--cor-01);
 }
 
 .menu:hover .pesquisa span {
   opacity: 1;
 }
 
-/* ---------- ITENS ---------- */
-/* ---------- ITENS ---------- */
+
+/* ---------- ITENS DO MENU ---------- */
 
 .item-menu {
   display: flex;
   align-items: center;
+
   gap: 1.125rem;
 
   width: 100%;
 
   padding: 0.75rem;
+
   margin-bottom: 0.5rem;
 
   border-radius: 0.625rem;
 
   cursor: pointer;
+
   transition: .3s ease;
 
   text-decoration: none;
-  color: #fff;
+
+  color: var(--cor-01);
 }
 
 .item-menu:hover {
-  background: #1C1A46;
+  background: var(--cor-13);
 }
 
 .item-menu img {
   width: 1.75rem;
   height: 1.75rem;
+
   object-fit: contain;
+
   flex-shrink: 0;
 }
 
 .item-menu span {
   white-space: nowrap;
+
   opacity: 0;
+
   transition: .3s ease;
+
   font-size: 1rem;
   font-weight: 500;
 }
@@ -175,6 +250,7 @@ img {
   opacity: 1;
 }
 
+
 /* ---------- USUÁRIO ---------- */
 
 .usuario {
@@ -182,10 +258,13 @@ img {
 
   display: flex;
   align-items: center;
+
   gap: 0.9375rem;
 
-  background: #1C1A46;
+  background: var(--cor-13);
+
   padding: 0.75rem;
+
   border-radius: 0.625rem;
 }
 
@@ -195,7 +274,9 @@ img {
 
 .dados-usuario {
   opacity: 0;
+
   transition: .3s;
+
   white-space: nowrap;
 }
 
@@ -205,13 +286,18 @@ img {
 
 .dados-usuario h4 {
   font-size: .9rem;
+
+  color: var(--cor-01);
 }
 
 .dados-usuario p {
   font-size: .7rem;
-  color: #bdbdbd;
+
+  color: var(--cor-11);
+
   margin-top: 0.25rem;
 }
+
 
 /* ---------- TEMA ---------- */
 
@@ -219,197 +305,201 @@ img {
   opacity: 1;
 }
 
-.item-menu{ 
+
+/* ---------- BOTÃO MODO ESCURO ---------- */
+
+button.modo-escuro {
+  border: none;
+
+  background: transparent;
+
+  font: inherit;
+
+  color: inherit;
+
+  text-align: left;
+
+  appearance: none;
+
+  -webkit-appearance: none;
+}
+
+
+/* ---------- HERO ---------- */
+
+.hero {
   display: flex;
+
   align-items: center;
-  gap: 1.125rem;
+
+  justify-content: space-between;
 
   width: 100%;
 
-  padding: 0.75rem;
-  margin-bottom: 0.5rem;
+  padding-top: 7rem;
 
-  border-radius: 0.625rem;
+  padding-left: 7rem;
 
-  cursor: pointer;
-  transition: .3s ease;
-
-  text-decoration: none;
-  color: #fff;
+  padding-right: 2rem;
 }
 
-.item-menu:hover {
-  background: #1C1A46;
-}
 
-.item-menu img {
-  width: 2rem;
-  height: 1.75rem;
-  object-fit: contain;
-  flex-shrink: 0;
-}
-
-.item-menu span {
-  white-space: nowrap;
-  opacity: 0;
-  transition: .3s ease;
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-/* ---------- CONTEÚDO ---------- */
-/* =========================================================
-HERO / APRESENTAÇÃO
-========================================================= */
-
-.hero {
-display: flex;
-align-items: center;
-justify-content: space-between;
-
-width: 100%;
-
-padding-top: 7rem;
-padding-left: 7rem;
-padding-right: 2rem;
-
-}
-
-/* =========================================================
-CONTEÚDO INICIAL
-========================================================= */
+/* ---------- CONTEÚDO INICIAL ---------- */
 
 .hero-conteudo {
-width: 50%;
+  width: 50%;
 }
 
 .conteudoInicial {
-max-width: 43.75rem;
+  max-width: 43.75rem;
 
-margin-left: 0;
-padding-top: 2rem;
-padding-left: 2.5rem;
+  margin-left: 0;
 
-animation: fadeInLeft 0.7s ease both;
+  padding-top: 2rem;
 
+  padding-left: 2.5rem;
+
+  animation: fadeInLeft 0.7s ease both;
 }
 
 .conteudoInicial h1 {
-font-size: 2.5rem;
-font-weight: 700;
-line-height: 1.15;
+  font-size: 2.5rem;
+
+  font-weight: 700;
+
+  line-height: 1.15;
+
+  color: var(--cor-01);
 }
 
 .conteudoInicial p {
-margin-top: 1.5625rem;
+  margin-top: 1.5625rem;
 
-font-size: 1.2rem;
-line-height: 1.7;
+  font-size: 1.2rem;
 
-color: #d9d9d9;
+  line-height: 1.7;
 
+  color: var(--cor-02);
 }
 
-/* =========================================================
-BOTÕES
-========================================================= */
+
+/* ---------- BOTÕES ---------- */
 
 .botoes {
-display: flex;
-gap: 1.5rem;
+  display: flex;
 
-margin-top: 2.5rem;
-padding-left: 2.5rem;
+  gap: 1.5rem;
 
-animation: fadeInUp 0.7s 0.2s ease both;
+  margin-top: 2.5rem;
 
+  padding-left: 2.5rem;
+
+  animation: fadeInUp 0.7s 0.2s ease both;
 }
 
 .botoes button {
-width: 13.75rem;
-height: 3.625rem;
+  width: 13.75rem;
 
-border-radius: 2.1875rem;
+  height: 3.625rem;
 
-font-size: 1rem;
-font-weight: 700;
+  border-radius: 2.1875rem;
 
-cursor: pointer;
+  font-size: 1rem;
 
-transition: 0.3s ease;
+  font-weight: 700;
 
+  cursor: pointer;
+
+  transition: 0.3s ease;
 }
 
-/* Botão principal */
+
+/* ---------- BOTÃO PRINCIPAL ---------- */
 
 .btn-primary {
-margin-left: 0;
+  margin-left: 0;
 
-background: #49C6E5;
-color: #05032A;
+  background: var(--cor-10);
 
-border: none;
+  color: var(--cor-01);
 
-box-shadow: 0 0 1.125rem rgba(73, 198, 229, 0.5);
+  border: none;
 
+  box-shadow: 0 0 1.125rem var(--cor-06);
 }
 
 .btn-primary:hover {
-transform: translateY(-0.25rem);
-background: #61d3ef;
+  transform: translateY(-0.25rem);
+
+  background: var(--cor-06);
 }
 
-/* Botão secundário */
+
+/* ---------- BOTÃO SECUNDÁRIO ---------- */
 
 .btn-secondary {
-background: transparent;
-color: #fff;
+  background: transparent;
 
-border: 0.125rem solid #fff;
+  color: var(--cor-01);
 
+  border: 0.125rem solid var(--cor-01);
 }
 
 .btn-secondary:hover {
-transform: translateY(-0.25rem);
-background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-0.25rem);
+
+  background: var(--cor-13);
 }
 
-/* =========================================================
-PROTÓTIPO
-========================================================= */
+
+/* ---------- PROTÓTIPO ---------- */
 
 .prototipo {
-display: flex;
-justify-content: center;
-align-items: center;
-width: 45%;
+  display: flex;
 
-animation: fadeInRight 0.8s 0.1s ease both;
+  justify-content: center;
 
+  align-items: center;
+
+  width: 45%;
+
+  animation: fadeInRight 0.8s 0.1s ease both;
 }
 
 .prototipo img {
-width: 100%;
-max-width: 40.625rem;
+  width: 100%;
 
-filter: drop-shadow(
-    0 0 0.75rem rgba(73, 198, 229, 0.7)
-);
+  max-width: 40.625rem;
 
-
+  filter: drop-shadow(
+    0 0 0.75rem var(--cor-06)
+  );
 }
+
+
+/* ---------- POLÍTICAS ---------- */
 
 .politicas {
   display: flex;
+
   justify-content: center;
+
   align-items: flex-start;
+
   gap: 5rem;
+
   width: 100%;
+
   max-width: 75rem;
+
   margin: 5rem auto;
+
   margin-top: 20rem;
+
   padding: 0 1.875rem;
+
   box-sizing: border-box;
+
   animation: fadeInUp 0.7s 0.3s ease both;
 }
 
@@ -422,69 +512,102 @@ filter: drop-shadow(
 .diferencial h2,
 .objetivo h2,
 .publico h2 {
-  color: #fff;
+  color: var(--cor-01);
+
   font-size: 1.5rem;
+
   font-weight: 700;
+
   margin-bottom: 1.125rem;
+
   text-align: left;
 }
 
 .diferencial p,
 .objetivo p,
 .publico p {
-  color: #fff;
+  color: var(--cor-02);
+
   font-size: 1.1rem;
+
   line-height: 1.6;
+
   font-weight: 400;
+
   text-align: left;
+
   margin: 0;
 }
+
 
 /* ---------- ALERTAS ---------- */
 
 .cards {
   display: grid;
+
   grid-template-columns: repeat(2, 20rem);
+
   gap: 1.5rem 8rem;
 
   justify-content: center;
+
   align-content: center;
 
   width: 100%;
+
   margin: 5rem auto;
+
   margin-top: 10rem;
+
   animation: fadeInUp 0.7s 0.4s ease both;
 }
 
 .card {
   display: flex;
+
   align-items: center;
+
   gap: 1rem;
 
-  border: 0.12rem solid rgba(255, 255, 255, 0.6);
+  border: 0.12rem solid var(--cor-12);
+
   border-radius: 0.5rem;
 
   padding: 0.8rem 0.5rem;
+
   background: transparent;
-  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .card:hover {
   transform: translateY(-0.25rem);
-  border-color: rgba(73, 198, 229, 0.8);
-  box-shadow: 0 0 0.75rem rgba(73, 198, 229, 0.25);
+
+  border-color: var(--cor-10);
+
+  box-shadow:
+    0 0 0.75rem var(--cor-06);
 }
 
 .card img {
   width: 2.8rem;
+
   height: 2.8rem;
+
   object-fit: contain;
 }
 
 .card h3 {
-  color: #fff;
+  color: var(--cor-01);
+
   font-size: 1rem;
+
   font-weight: 700;
+
   line-height: 1.2;
+
   text-transform: uppercase;
 }

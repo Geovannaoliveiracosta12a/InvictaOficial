@@ -1,5 +1,9 @@
 @import "../colors.css";
 
+/* =========================================================
+   CONFIGURAÇÕES GERAIS
+========================================================= */
+
 * {
   margin: 0;
   padding: 0;
@@ -20,16 +24,37 @@ body {
   );
 
   color: var(--cor-texto);
+
   position: relative;
   min-height: 100vh;
+
+  /* ---------- TRANSIÇÃO DE TEMA ---------- */
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
+
+body.entrando {
+  opacity: 1;
+}
+
+body.saindo {
+  opacity: 0;
+}
+
+
+/* =========================================================
+   LARGURA DA PÁGINA
+========================================================= */
 
 #page {
   max-width: 1300px;
   margin-inline: auto;
 }
 
-/* ---------- ANIMAÇÕES ---------- */
+
+/* =========================================================
+   ANIMAÇÕES
+========================================================= */
 
 @keyframes fadeInUp {
   from {
@@ -43,21 +68,30 @@ body {
   }
 }
 
-/* ---------- IMAGENS ---------- */
+
+/* =========================================================
+   IMAGENS
+========================================================= */
 
 img {
   max-width: 100%;
   display: block;
 }
 
-/* ---------- MENU ---------- */
+
+/* =========================================================
+   MENU
+========================================================= */
 
 .menu {
   position: fixed;
+
   top: 0;
   left: 0;
+
   width: 4.6875rem;
   height: 100vh;
+
   text-decoration: none;
 
   background: var(--cor-menu);
@@ -68,9 +102,11 @@ img {
   padding: 1.25rem 0.9375rem;
 
   overflow: hidden;
+
   transition: .35s ease;
 
   border-radius: 0 1.25rem 1.25rem 0;
+
   z-index: 999;
 }
 
@@ -78,12 +114,17 @@ img {
   width: 16.25rem;
 }
 
-/* ---------- LOGO ---------- */
+
+/* =========================================================
+   LOGO
+========================================================= */
 
 .logo {
   display: flex;
   align-items: center;
+
   gap: 0.9375rem;
+
   margin-bottom: 2.5rem;
 }
 
@@ -93,10 +134,13 @@ img {
 
 .logo span {
   font-size: 2rem;
+
   font-weight: 700;
+
   white-space: nowrap;
 
   opacity: 0;
+
   transition: .3s;
 }
 
@@ -104,17 +148,23 @@ img {
   opacity: 1;
 }
 
-/* ---------- PESQUISA ---------- */
+
+/* =========================================================
+   PESQUISA
+========================================================= */
 
 .pesquisa {
   display: flex;
   align-items: center;
+
   gap: 0.9375rem;
 
   background: var(--cor-elemento);
+
   border-radius: 0.625rem;
 
   padding: 0.75rem;
+
   margin-bottom: 1.5625rem;
 }
 
@@ -124,7 +174,9 @@ img {
 
 .pesquisa span {
   white-space: nowrap;
+
   opacity: 0;
+
   transition: .3s;
 }
 
@@ -132,24 +184,31 @@ img {
   opacity: 1;
 }
 
-/* ---------- ITENS ---------- */
+
+/* =========================================================
+   ITENS DO MENU
+========================================================= */
 
 .item-menu {
   display: flex;
   align-items: center;
+
   gap: 1.125rem;
 
   width: 100%;
 
   padding: 0.75rem;
+
   margin-bottom: 0.5rem;
 
   border-radius: 0.625rem;
 
   cursor: pointer;
+
   transition: .3s ease;
 
   text-decoration: none;
+
   color: var(--cor-texto);
 }
 
@@ -160,15 +219,21 @@ img {
 .item-menu img {
   width: 1.75rem;
   height: 1.75rem;
+
   object-fit: contain;
+
   flex-shrink: 0;
 }
 
 .item-menu span {
   white-space: nowrap;
+
   opacity: 0;
+
   transition: .3s ease;
+
   font-size: 1rem;
+
   font-weight: 500;
 }
 
@@ -176,18 +241,25 @@ img {
   opacity: 1;
 }
 
-/* ---------- USUÁRIO ---------- */
+
+/* =========================================================
+   USUÁRIO
+========================================================= */
 
 .usuario {
   margin-top: auto;
+
   margin-bottom: 20px;
 
   display: flex;
   align-items: center;
+
   gap: 0.9375rem;
 
   background: var(--cor-elemento);
+
   padding: 0.75rem;
+
   border-radius: 0.625rem;
 }
 
@@ -197,7 +269,9 @@ img {
 
 .dados-usuario {
   opacity: 0;
+
   transition: .3s;
+
   white-space: nowrap;
 }
 
@@ -207,69 +281,117 @@ img {
 
 .dados-usuario h4 {
   font-size: .9rem;
+
   margin: 0;
 }
 
 .dados-usuario p {
   font-size: .7rem;
+
   color: var(--cor-texto-terciario);
+
   margin: 0.25rem 0 0 0;
 }
 
-/* ---------- TEMA ---------- */
 
-.menu:hover .item-menu {
-  opacity: 1;
+/* =========================================================
+   BOTÃO MODO CLARO
+========================================================= */
+
+button.modo-claro {
+  border: none;
+
+  background: transparent;
+
+  font: inherit;
+
+  color: inherit;
+
+  text-align: left;
+
+  appearance: none;
+
+  -webkit-appearance: none;
 }
 
-/* ---------- INÍCIO DO CSS EQUIPE ---------- */
+
+/* =========================================================
+   INÍCIO DO CSS EQUIPE
+========================================================= */
+
 
 /* ---------- TÍTULO ---------- */
 
 .titulo {
   width: 788px;
+
   height: 59px;
+
   aspect-ratio: 788/59;
 }
 
 .titulo,
 h1 {
   color: var(--cor-texto);
+
   font-family: Montserrat;
+
   font-size: 48px;
+
   font-style: normal;
+
   font-weight: 700;
+
   line-height: normal;
+
   margin-left: 66px;
+
   margin-top: 240px;
 }
 
-/* ---------- DESCRIÇÃO DO TÍTULO ---------- */
+
+/* ---------- DESCRIÇÃO ---------- */
 
 #descricao {
   width: 680px;
+
   margin-top: 10px;
 
   color: var(--cor-texto);
+
   font-family: Montserrat;
+
   font-size: 16px;
+
   font-style: normal;
+
   font-weight: 300;
+
   line-height: normal;
+
   margin-left: 130px;
 }
 
-/* ---------- IMAGENS DA EQUIPE ---------- */
+
+/* =========================================================
+   IMAGENS DA EQUIPE
+========================================================= */
 
 .linha-meninas {
   display: flex;
+
   gap: 100px;
+
   margin-top: 119px;
 }
+
+
+/* ---------- INFORMAÇÕES DOS CARDS ---------- */
 
 .info-card p,
 .info-card h4 {
   color: #000000;
+
   padding-left: 15px;
 }
 
@@ -277,32 +399,44 @@ h1 {
   font-weight: 600;
 }
 
+
+/* ---------- CARD ---------- */
+
 .card {
   width: 300px;
 }
 
 .card img {
   width: 300px;
+
   display: block;
+
   border-radius: 20px 20px 0 0;
 }
 
 .info-card {
   width: 300px;
+
   background: #E3F1F3;
+
   border-radius: 0 0 20px 20px;
+
   padding: 15px 0;
 }
 
 .info-card p,
 .info-card h4 {
   margin: 0;
+
   background: none;
 }
 
 .info-card p {
   font-size: 12px;
 }
+
+
+/* ---------- POSICIONAMENTO ---------- */
 
 #geo {
   margin-left: 185px;
@@ -320,37 +454,55 @@ h1 {
   margin-right: 283px;
 }
 
+
+/* ---------- LINHA DOS MENINOS ---------- */
+
 .linha-meninos {
   display: flex;
+
   gap: 120px;
+
   margin-top: 150px;
 }
 
 .card {
   width: 300px;
+
   height: 350px;
 }
 
-/* ---------- CONTATE-NOS ---------- */
+
+/* =========================================================
+   CONTATE-NOS
+========================================================= */
 
 .informacao {
   display: flex;
+
   flex-direction: column;
+
   align-items: flex-start;
 }
 
 h2 {
   color: #CECECE;
+
   font-family: Montserrat;
+
   font-size: 60px;
+
   font-style: normal;
+
   font-weight: 100;
+
   line-height: normal;
+
   margin-top: 100px;
 }
 
 .informacao label {
   display: block;
+
   margin-top: 15px;
 }
 
@@ -361,65 +513,111 @@ textarea {
 .informacao input,
 .informacao textarea {
   display: block;
+
   width: 946px;
+
   margin-bottom: 15px;
+
   background: transparent;
+
   border: none;
+
   border-bottom: 1px solid #CECECE;
+
   outline: none;
+
   color: #CECECE;
+
   padding: 8px 0;
+
   margin-top: 8px;
+
   margin-bottom: 20px;
 }
 
 .contate-nos {
   margin-left: 230px;
+
   margin-top: 200px;
 }
 
+
+/* =========================================================
+   BOTÃO ENVIAR
+========================================================= */
+
 button {
   width: 232px;
+
   height: 61px;
+
   background: var(--cor-texto);
+
   border: none;
+
   color: #000;
+
   font-family: Montserrat;
+
   font-size: 20px;
+
   font-style: normal;
+
   font-weight: 550;
+
   line-height: normal;
+
   margin-top: 40px;
 }
 
-/* ---------- INFORMACOES ---------- */
+
+/* =========================================================
+   INFORMAÇÕES
+========================================================= */
 
 h3 {
   color: var(--cor-fundo-3);
+
   font-family: Montserrat;
+
   font-size: 32px;
+
   font-style: normal;
+
   font-weight: 500;
+
   line-height: normal;
+
   margin-left: 230px;
+
   padding-top: 30px;
 }
 
 .info {
   background: #E3F1F3;
+
   width: 100%;
+
   height: 200px;
+
   margin-top: 150px;
+
   margin-bottom: 300px;
 }
 
 .item-info {
   display: flex;
+
   align-items: center;
+
   gap: 15px;
+
   margin-left: 350px;
+
   margin-top: 20px;
+
   color: var(--cor-fundo-3);
+
   padding-top: 30px;
 }
 
@@ -429,10 +627,16 @@ h3 {
 
 .item-info p {
   margin: 0;
+
   color: var(--cor-fundo-3);
+
   font-family: Montserrat;
+
   font-size: 20px;
+
   font-style: normal;
+
   font-weight: 400;
+
   line-height: normal;
 }
