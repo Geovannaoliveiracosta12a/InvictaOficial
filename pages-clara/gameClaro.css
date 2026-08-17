@@ -1,45 +1,54 @@
 @import "../colors.css";
 
+/* =========================================================
+   CONFIGURAÇÕES GERAIS
+========================================================= */
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  background: linear-gradient(180deg, var(--cor-texto) 0%, var(--cor-15) 56.25%, var(--cor-texto) 100%);
-  color: var(--cor-elemento);
-  position: relative;
-  min-height: 100vh;
+    background: linear-gradient(
+        180deg,
+        var(--cor-texto) 0%,
+        var(--cor-15) 56.25%,
+        var(--cor-texto) 100%
+    );
+
+    color: var(--cor-elemento);
+
+    position: relative;
+    min-height: 100vh;
+
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
-#page {
-  /* border: 1px solid red; */
-  max-width: 1300px;
-  margin-inline: auto;
+body.entrando {
+    opacity: 1;
 }
+
+body.saindo {
+    opacity: 0;
+}
+
 
 /* =========================================================
-   ANIMAÇÕES
+   IMAGENS
 ========================================================= */
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(2rem);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+img {
+    max-width: 100%;
+    display: block;
 }
-
 
 
 /* =========================================================
@@ -47,25 +56,32 @@ body {
 ========================================================= */
 
 .menu {
-  position: fixed;
-  top: 0;
-  left: 0;
+    position: fixed;
 
-  width: 4.6875rem;
-  height: 100vh;
-  background: var(--cor-13);
-  display: flex;
-  flex-direction: column;
-  padding: 1.25rem 0.9375rem;
-  overflow: hidden;
-  transition: width 0.35s ease;
-  border-radius: 0 1.25rem 1.25rem 0;
-  z-index: 999;
+    top: 0;
+    left: 0;
+
+    width: 4.6875rem;
+    height: 100vh;
+
+    background: var(--cor-13);
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 1.25rem 0.9375rem;
+
+    overflow: hidden;
+
+    transition: width 0.35s ease;
+
+    border-radius: 0 1.25rem 1.25rem 0;
+
+    z-index: 999;
 }
 
-/* Quando passa o mouse, o menu abre */
 .menu:hover {
-  width: 16.25rem;
+    width: 16.25rem;
 }
 
 
@@ -74,68 +90,83 @@ body {
 ========================================================= */
 
 .logo {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 
-  gap: 0.9375rem;
-  margin-bottom: 2.5rem;
-  flex-shrink: 0;
+    gap: 0.9375rem;
+
+    margin-bottom: 2.5rem;
+
+    flex-shrink: 0;
 }
 
 .logo img {
-  width: 2.5rem;
-  height: 2.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
 
-  object-fit: contain;
-  flex-shrink: 0;
+    object-fit: contain;
+
+    flex-shrink: 0;
 }
 
 .logo span {
-  font-size: 2rem;
-  font-weight: 700;
+    font-size: 2rem;
+    font-weight: 700;
 
-  white-space: nowrap;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+    white-space: nowrap;
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
 }
 
 .menu:hover .logo span {
-  opacity: 1;
+    opacity: 1;
 }
+
+
 /* =========================================================
    PESQUISA
 ========================================================= */
 
 .pesquisa {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 
-  gap: 0.9375rem;
-  width: 100%;
+    gap: 0.9375rem;
 
-  background: rgba(161, 220, 230, 0.70);
-  border-radius: 0.625rem;
-  padding: 0.75rem;
-  margin-bottom: 1.5625rem;
-  flex-shrink: 0;
+    width: 100%;
+
+    background: rgba(161, 220, 230, 0.70);
+
+    border-radius: 0.625rem;
+
+    padding: 0.75rem;
+
+    margin-bottom: 1.5625rem;
+
+    flex-shrink: 0;
 }
 
 .pesquisa img {
-  width: 1.625rem;
-  height: 1.625rem;
+    width: 1.625rem;
+    height: 1.625rem;
 
-  object-fit: contain;
-  flex-shrink: 0;
+    object-fit: contain;
+
+    flex-shrink: 0;
 }
 
 .pesquisa span {
-  white-space: nowrap;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+    white-space: nowrap;
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
 }
 
 .menu:hover .pesquisa span {
-  opacity: 1;
+    opacity: 1;
 }
 
 
@@ -144,43 +175,58 @@ body {
 ========================================================= */
 
 .item-menu {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 
-  gap: 1.125rem;
-  width: 100%;
-  padding: 0.75rem;
-  margin-bottom: 0.5rem;
-  border-radius: 0.625rem;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  text-decoration: none;
-  color: var(--cor-01);
-  flex-shrink: 0;
+    gap: 1.125rem;
+
+    width: 100%;
+
+    padding: 0.75rem;
+
+    margin-bottom: 0.5rem;
+
+    border-radius: 0.625rem;
+
+    cursor: pointer;
+
+    transition: background 0.3s ease;
+
+    text-decoration: none;
+
+    color: var(--cor-01);
+
+    flex-shrink: 0;
 }
 
 .item-menu:hover {
-  background: var(--cor-06);
+    background: var(--cor-06);
 }
 
 .item-menu img {
-  width: 1.75rem;
-  height: 1.75rem;
-  object-fit: contain;
-  flex-shrink: 0;
+    width: 1.75rem;
+    height: 1.75rem;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
 }
 
 .item-menu span {
-  white-space: nowrap;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--cor-01);
+    white-space: nowrap;
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+
+    font-size: 1rem;
+    font-weight: 500;
+
+    color: var(--cor-01);
 }
 
 .menu:hover .item-menu span {
-  opacity: 1;
+    opacity: 1;
 }
 
 
@@ -189,128 +235,206 @@ body {
 ========================================================= */
 
 .usuario {
-  margin-top: auto;
-  display: flex;
-  align-items: center;
-  gap: 0.9375rem;
-  width: 100%;
-  background: rgba(161, 220, 230, 0.70);
-  padding: 0.75rem;
-  border-radius: 0.625rem;
-  flex-shrink: 0;
+    margin-top: auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 0.9375rem;
+
+    width: 100%;
+
+    background: rgba(161, 220, 230, 0.70);
+
+    padding: 0.75rem;
+
+    border-radius: 0.625rem;
+
+    flex-shrink: 0;
 }
 
-/* Ícone do usuário */
 .usuario img {
-  width: 2.1875rem;
-  height: 2.1875rem;
-  object-fit: contain;
-  flex-shrink: 0;
+    width: 2.1875rem;
+    height: 2.1875rem;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
 }
 
-/* Informações do usuário */
 .dados-usuario {
-  opacity: 0;
-  max-width: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  transition:
-    opacity 0.3s ease,
-    max-width 0.3s ease;
+    opacity: 0;
+
+    max-width: 0;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    transition:
+        opacity 0.3s ease,
+        max-width 0.3s ease;
 }
 
 .menu:hover .dados-usuario {
-  opacity: 1;
-  max-width: 180px;
+    opacity: 1;
+    max-width: 180px;
 }
-/* Nome */
+
 .dados-usuario h4 {
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin: 0;
-  color: var(--cor-01);
+    font-size: 0.9rem;
+
+    font-weight: 600;
+
+    margin: 0;
+
+    color: var(--cor-01);
 }
 
-
-/* E-mail */
 .dados-usuario p {
-  font-size: 0.7rem;
-  font-weight: 400;
-  color: var(--cor-01);
-  opacity: 0.6;
-  margin: 0.25rem 0 0 0;
-  width: auto;
-  height: auto;
-}
+    font-size: 0.7rem;
 
-/* ---------- TEMA ---------- */
+    font-weight: 400;
 
-.menu:hover .item-menu {
-  opacity: 1;
-}
+    color: var(--cor-01);
 
-.item-menu{ 
-  display: flex;
-  align-items: center;
-  gap: 1.125rem;
+    opacity: 0.6;
 
-  width: 100%;
-
-  padding: 0.75rem;
-  margin-bottom: 0.5rem;
-
-  border-radius: 0.625rem;
-
-  cursor: pointer;
-  transition: .3s ease;
-
-  text-decoration: none;
-  color: var(--cor-texto);
-}
-
-.item-menu:hover {
-  color: rgba(161, 220, 230, 0.70);  
-}
-
-.item-menu img {
-  width: 2rem;
-  height: 1.75rem;
-  object-fit: contain;
-  flex-shrink: 0;
-}
-
-.item-menu span {
-  white-space: nowrap;
-  opacity: 0;
-  transition: .3s ease;
-  font-size: 1rem;
-  font-weight: 500;
+    margin: 0.25rem 0 0 0;
 }
 
 
 /* =========================================================
-   IMAGEM PRINCIPAL DO SIMCE
+   BOTÃO MODO ESCURO
 ========================================================= */
+
+button.modo-escuro {
+    border: none;
+
+    background: transparent;
+
+    font: inherit;
+
+    color: inherit;
+
+    text-align: left;
+
+    appearance: none;
+
+    -webkit-appearance: none;
+}
+
+
+/* =========================================================
+   ANIMAÇÕES
+========================================================= */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   CONTEÚDO PRINCIPAL
+========================================================= */
+
 #page {
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-  margin-top: 2rem;
+    max-width: 1300px;
+
+    margin-inline: auto;
+
+    padding-left: 5rem;
+    padding-right: 2rem;
+
+    padding-top: 2rem;
 }
+
+
+/* =========================================================
+   CONTEÚDO DO GAME
+========================================================= */
+
+.conteudo-game {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   IMAGEM PRINCIPAL
+========================================================= */
+
+#img-simce {
+    width: 100%;
+    max-width: 650px;
+
+    margin-top: 3rem;
+
+    object-fit: contain;
+
+    animation: fadeInUp 0.6s ease both;
+}
+
 
 /* =========================================================
    TÍTULO
 ========================================================= */
 
 .titulo {
-  margin-top: 10rem;
-  font-size: 2.5rem;
+    margin-top: 5rem;
 
-  color: var(--cor-01);
-  font-weight: 700;
-  animation: fadeInUp 0.6s ease both;
+    font-size: 2.5rem;
+
+    color: var(--cor-01);
+
+    font-weight: 700;
+
+    text-align: center;
+
+    animation: fadeInUp 0.6s 0.1s ease both;
+}
+
+
+/* =========================================================
+   DESCRIÇÃO
+========================================================= */
+
+#descricao,
+.descricao2 {
+    width: 54.5rem;
+
+    max-width: 90%;
+
+    color: var(--cor-texto);
+
+    font-size: 1rem;
+
+    font-weight: 300;
+
+    line-height: 1.7;
+
+    text-align: center;
+}
+
+#descricao {
+    margin-top: 2.5rem;
+
+    animation: fadeInUp 0.6s 0.2s ease both;
 }
 
 
@@ -318,41 +442,35 @@ body {
    SUBTÍTULO
 ========================================================= */
 
-.subtititulo {
-  margin-top: 3.2rem;
+.subtitulo {
+    width: 54.5rem;
+
+    max-width: 90%;
+
+    margin-top: 3.2rem;
+
+    color: var(--cor-01);
+
+    font-size: 1.6rem;
+
+    font-weight: 600;
+
+    text-align: left;
+
+    animation: fadeInUp 0.6s 0.3s ease both;
 }
 
-.subtititulo h2 {
-  color: var(--cor-texto);
-  font-size: 1.6rem;
-  font-weight: 600;
-}
+
 /* =========================================================
-   DESCRIÇÕES
+   HISTÓRIA
 ========================================================= */
 
-/*
-   IMPORTANTE:
-   Não usar apenas "p {}" aqui.
-
-   A classe .texto-descricao serve somente para
-   os textos da página do jogo.
-*/
-
-.texto-descricao {
-  margin-left: 14.5rem;
-  width: 54.5rem;
-  height: 5.1rem;
-  color: var(--cor-texto);
-  font-weight: 300;
-}
-
 .descricao2 {
-  margin-top: 1.5rem;
-}
+    margin-top: 1.5rem;
 
-#descricao {
-  margin-top: 2.5rem;
+    text-align: left;
+
+    animation: fadeInUp 0.6s 0.4s ease both;
 }
 
 
@@ -362,45 +480,64 @@ body {
 
 #video-games {
     display: block;
+
     width: 62rem;
+    max-width: 90%;
+
     height: 30rem;
 
     margin: 8.4rem auto 4rem;
+
     border-radius: 1.25rem;
+
+    object-fit: cover;
+
+    animation: fadeInUp 0.7s 0.5s ease both;
 }
+
 
 /* =========================================================
    BOTÃO DO JOGO
 ========================================================= */
 
 .botao-jogo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
 
-  width: 18rem;
-  height: 3.5rem;
+    justify-content: center;
 
-  margin: 0 auto 6.5rem;
+    align-items: center;
 
-  border: none;
-  border-radius: 1.25rem;
-  background: var(--cor-10);
+    width: 18rem;
 
-  box-shadow: 5px 5px 7px 1px rgba(68, 215, 229, 0.50);
+    height: 3.5rem;
 
-  color: var(--cor-fundo-1);
-  font-weight: 700;
-  font-size: 1.25rem;
+    margin: 0 auto 6.5rem;
 
-  cursor: pointer;
+    border: none;
 
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+    border-radius: 1.25rem;
+
+    background: var(--cor-10);
+
+    box-shadow:
+        5px 5px 7px 1px rgba(68, 215, 229, 0.50);
+
+    color: var(--cor-fundo-1);
+
+    font-weight: 700;
+
+    font-size: 1.25rem;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .botao-jogo:hover {
-  transform: translateY(-2px);
-  box-shadow: 5px 7px 10px 2px rgba(68, 215, 229, 0.50);
+    transform: translateY(-2px);
+
+    box-shadow:
+        5px 7px 10px 2px rgba(68, 215, 229, 0.50);
 }

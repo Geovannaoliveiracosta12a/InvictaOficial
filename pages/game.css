@@ -1,49 +1,65 @@
 @import "../colors.css";
 
+
+/* =========================================================
+   CONFIGURAÇÕES GERAIS
+========================================================= */
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Montserrat', sans-serif;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  background: linear-gradient(
-    135deg,
-    var(--cor-fundo-1),
-    var(--cor-fundo-2),
-    var(--cor-fundo-3)
-  );
 
-  color: var(--cor-texto);
-  position: relative;
-  min-height: 100vh;
+    background: linear-gradient(
+        135deg,
+        var(--cor-fundo-1),
+        var(--cor-fundo-2),
+        var(--cor-fundo-3)
+    );
+
+    color: var(--cor-texto);
+
+    position: relative;
+
+    min-height: 100vh;
 }
 
-#page {
-  /* border: 1px solid red; */
-  max-width: 1300px;
-  margin-inline: auto;
-}
 
 /* =========================================================
    ANIMAÇÕES
 ========================================================= */
 
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(2rem);
-  }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   IMAGENS
+========================================================= */
+
+img {
+    max-width: 100%;
+    display: block;
 }
 
 
@@ -52,30 +68,34 @@ body {
 ========================================================= */
 
 .menu {
-  position: fixed;
-  top: 0;
-  left: 0;
 
-  width: 4.6875rem;
-  height: 100vh;
+    position: fixed;
 
-  background: var(--cor-menu);
+    top: 0;
+    left: 0;
 
-  display: flex;
-  flex-direction: column;
+    width: 4.6875rem;
+    height: 100vh;
 
-  padding: 1.25rem 0.9375rem;
+    background: var(--cor-menu);
 
-  overflow: hidden;
-  transition: width 0.35s ease;
+    display: flex;
+    flex-direction: column;
 
-  border-radius: 0 1.25rem 1.25rem 0;
-  z-index: 999;
+    padding: 1.25rem 0.9375rem;
+
+    overflow: hidden;
+
+    transition: width 0.35s ease;
+
+    border-radius: 0 1.25rem 1.25rem 0;
+
+    z-index: 999;
 }
 
-/* Quando passa o mouse, o menu abre */
+
 .menu:hover {
-  width: 16.25rem;
+    width: 16.25rem;
 }
 
 
@@ -84,33 +104,46 @@ body {
 ========================================================= */
 
 .logo {
-  display: flex;
-  align-items: center;
 
-  gap: 0.9375rem;
-  margin-bottom: 2.5rem;
-  flex-shrink: 0;
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.9375rem;
+
+    margin-bottom: 2.5rem;
+
+    flex-shrink: 0;
 }
+
 
 .logo img {
-  width: 2.5rem;
-  height: 2.5rem;
 
-  object-fit: contain;
-  flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
 }
+
 
 .logo span {
-  font-size: 2rem;
-  font-weight: 700;
 
-  white-space: nowrap;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+    font-size: 2rem;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
 }
 
+
 .menu:hover .logo span {
-  opacity: 1;
+    opacity: 1;
 }
 
 
@@ -119,37 +152,50 @@ body {
 ========================================================= */
 
 .pesquisa {
-  display: flex;
-  align-items: center;
 
-  gap: 0.9375rem;
-  width: 100%;
+    display: flex;
 
-  background: var(--cor-elemento);
+    align-items: center;
 
-  border-radius: 0.625rem;
-  padding: 0.75rem;
-  margin-bottom: 1.5625rem;
+    gap: 0.9375rem;
 
-  flex-shrink: 0;
+    width: 100%;
+
+    background: var(--cor-elemento);
+
+    border-radius: 0.625rem;
+
+    padding: 0.75rem;
+
+    margin-bottom: 1.5625rem;
+
+    flex-shrink: 0;
 }
+
 
 .pesquisa img {
-  width: 1.625rem;
-  height: 1.625rem;
 
-  object-fit: contain;
-  flex-shrink: 0;
+    width: 1.625rem;
+    height: 1.625rem;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
 }
+
 
 .pesquisa span {
-  white-space: nowrap;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+
+    white-space: nowrap;
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
 }
 
+
 .menu:hover .pesquisa span {
-  opacity: 1;
+    opacity: 1;
 }
 
 
@@ -158,48 +204,65 @@ body {
 ========================================================= */
 
 .item-menu {
-  display: flex;
-  align-items: center;
 
-  gap: 1.125rem;
-  width: 100%;
-  padding: 0.75rem;
-  margin-bottom: 0.5rem;
+    display: flex;
 
-  border-radius: 0.625rem;
+    align-items: center;
 
-  cursor: pointer;
-  transition: background 0.3s ease;
+    gap: 1.125rem;
 
-  text-decoration: none;
-  color: var(--cor-texto);
+    width: 100%;
 
-  flex-shrink: 0;
+    padding: 0.75rem;
+
+    margin-bottom: 0.5rem;
+
+    border-radius: 0.625rem;
+
+    cursor: pointer;
+
+    transition: background 0.3s ease;
+
+    text-decoration: none;
+
+    color: var(--cor-texto);
+
+    flex-shrink: 0;
 }
+
 
 .item-menu:hover {
-  background: var(--cor-elemento);
+    background: var(--cor-elemento);
 }
+
 
 .item-menu img {
-  width: 1.75rem;
-  height: 1.75rem;
 
-  object-fit: contain;
-  flex-shrink: 0;
+    width: 1.75rem;
+    height: 1.75rem;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
 }
+
 
 .item-menu span {
-  white-space: nowrap;
-  opacity: 0;
-  transition: opacity 0.3s ease;
 
-  font-size: 1rem;
-  font-weight: 500;
+    white-space: nowrap;
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+
+    font-size: 1rem;
+
+    font-weight: 500;
 }
 
+
 .menu:hover .item-menu span {
-  opacity: 1;
+    opacity: 1;
 }
 
 
@@ -208,139 +271,157 @@ body {
 ========================================================= */
 
 .usuario {
-  margin-top: auto;
 
-  display: flex;
-  align-items: center;
+    margin-top: auto;
 
-  gap: 0.9375rem;
-  width: 100%;
+    display: flex;
 
-  background: var(--cor-elemento);
+    align-items: center;
 
-  padding: 0.75rem;
-  border-radius: 0.625rem;
+    gap: 0.9375rem;
 
-  flex-shrink: 0;
+    width: 100%;
+
+    background: var(--cor-elemento);
+
+    padding: 0.75rem;
+
+    border-radius: 0.625rem;
+
+    flex-shrink: 0;
 }
 
-/* Ícone do usuário */
 
 .usuario img {
-  width: 2.1875rem;
-  height: 2.1875rem;
 
-  object-fit: contain;
-  flex-shrink: 0;
+    width: 2.1875rem;
+    height: 2.1875rem;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
 }
 
-/* Informações do usuário */
 
 .dados-usuario {
-  opacity: 0;
-  max-width: 0;
 
-  overflow: hidden;
-  white-space: nowrap;
+    opacity: 0;
 
-  transition:
-    opacity 0.3s ease,
-    max-width 0.3s ease;
+    max-width: 0;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    transition:
+        opacity 0.3s ease,
+        max-width 0.3s ease;
 }
+
 
 .menu:hover .dados-usuario {
-  opacity: 1;
-  max-width: 180px;
+
+    opacity: 1;
+
+    max-width: 180px;
 }
 
-/* Nome */
 
 .dados-usuario h4 {
-  font-size: 0.9rem;
-  font-weight: 600;
 
-  margin: 0;
+    font-size: 0.9rem;
 
-  color: var(--cor-texto);
+    font-weight: 600;
+
+    margin: 0;
+
+    color: var(--cor-texto);
 }
 
-
-/* E-mail */
 
 .dados-usuario p {
-  font-size: 0.7rem;
-  font-weight: 400;
 
-  color: var(--cor-texto-terciario);
+    font-size: 0.7rem;
 
-  margin: 0.25rem 0 0 0;
+    font-weight: 400;
 
-  width: auto;
-  height: auto;
-}
+    color: var(--cor-texto-terciario);
 
-
-/* ---------- TEMA ---------- */
-
-.menu:hover .item-menu {
-  opacity: 1;
-}
-
-.item-menu {
-  display: flex;
-  align-items: center;
-
-  gap: 1.125rem;
-
-  width: 100%;
-
-  padding: 0.75rem;
-  margin-bottom: 0.5rem;
-
-  border-radius: 0.625rem;
-
-  cursor: pointer;
-  transition: .3s ease;
-
-  text-decoration: none;
-  color: var(--cor-texto);
-}
-
-.item-menu:hover {
-  background: var(--cor-elemento);
-}
-
-.item-menu img {
-  width: 2rem;
-  height: 1.75rem;
-
-  object-fit: contain;
-  flex-shrink: 0;
-}
-
-.item-menu span {
-  white-space: nowrap;
-  opacity: 0;
-
-  transition: .3s ease;
-
-  font-size: 1rem;
-  font-weight: 500;
+    margin: 0.25rem 0 0 0;
 }
 
 
 /* =========================================================
-   IMAGEM PRINCIPAL DO SIMCE
+   TEMA
+========================================================= */
+
+.modo-claro {
+
+    margin-top: 0.5rem;
+}
+
+
+.modo-claro img {
+
+    width: 2rem;
+
+    height: 1.75rem;
+}
+
+
+/* =========================================================
+   PÁGINA
 ========================================================= */
 
 #page {
-  min-height: 100vh;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    min-height: 100vh;
 
-  margin-top: 2rem;
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    max-width: 1300px;
+
+    margin-inline: auto;
+
+    margin-top: 2rem;
+
+    padding-bottom: 5rem;
+}
+
+
+/* =========================================================
+   CONTEÚDO
+========================================================= */
+
+.conteudo-game {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   IMAGEM PRINCIPAL
+========================================================= */
+
+#img-simce {
+
+    width: auto;
+
+    max-width: 800px;
+
+    margin-top: 4rem;
+
+    animation: fadeInUp 0.6s ease both;
 }
 
 
@@ -349,14 +430,56 @@ body {
 ========================================================= */
 
 .titulo {
-  margin-top: 10rem;
-  font-size: 2.5rem;
 
-  color: var(--cor-texto);
+    margin-top: 10rem;
 
-  font-weight: 700;
+    font-size: 2.5rem;
 
-  animation: fadeInUp 0.6s ease both;
+    color: var(--cor-texto);
+
+    font-weight: 700;
+
+    animation: fadeInUp 0.6s ease both;
+}
+
+
+/* =========================================================
+   DESCRIÇÕES
+========================================================= */
+
+#descricao {
+
+    margin-top: 2.5rem;
+
+    width: 54.5rem;
+
+    color: var(--cor-texto);
+
+    font-size: 1rem;
+
+    font-weight: 300;
+
+    line-height: 1.6;
+
+    text-align: left;
+}
+
+
+.descricao2 {
+
+    margin-top: 1.5rem;
+
+    width: 54.5rem;
+
+    color: var(--cor-texto);
+
+    font-size: 1rem;
+
+    font-weight: 300;
+
+    line-height: 1.6;
+
+    text-align: left;
 }
 
 
@@ -365,100 +488,164 @@ body {
 ========================================================= */
 
 .subtititulo {
-  margin-top: 3.2rem;
-}
 
-.subtititulo h2 {
-  color: var(--cor-texto);
+    width: 54.5rem;
 
-  font-size: 1.6rem;
-  font-weight: 600;
-}
+    margin-top: 3.2rem;
 
+    color: #000;
 
-/* =========================================================
-   DESCRIÇÕES
-========================================================= */
+    font-size: 1.6rem;
 
-/*
-   IMPORTANTE:
-   Não usar apenas "p {}" aqui.
+    font-weight: 600;
 
-   A classe .texto-descricao serve somente para
-   os textos da página do jogo.
-*/
-
-.texto-descricao {
-  margin-left: 14.5rem;
-
-  width: 54.5rem;
-  height: 5.1rem;
-
-  color: var(--cor-texto);
-
-  font-weight: 300;
-}
-
-.descricao2 {
-  margin-top: 1.5rem;
-}
-
-#descricao {
-  margin-top: 2.5rem;
+    text-align: left;
 }
 
 
 /* =========================================================
-   VÍDEO / GAMEPLAY
+   VÍDEO
 ========================================================= */
 
 #video-games {
-  display: block;
 
-  width: 62rem;
-  height: 30rem;
+    display: block;
 
-  margin: 8.4rem auto 4rem;
+    width: 62rem;
 
-  border-radius: 1.25rem;
+    height: 30rem;
+
+    margin: 8.4rem auto 4rem;
+
+    border-radius: 1.25rem;
+
+    object-fit: cover;
 }
 
 
 /* =========================================================
-   BOTÃO DO JOGO
+   BOTÃO
 ========================================================= */
 
 .botao-jogo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-  width: 18rem;
-  height: 3.5rem;
+    display: flex;
 
-  margin: 0 auto 6.5rem;
+    justify-content: center;
 
-  border: none;
-  border-radius: 1.25rem;
+    align-items: center;
 
-  background: var(--cor-destaque);
+    width: 18rem;
 
-  box-shadow: 5px 5px 7px 1px var(--sombra-destaque);
+    height: 3.5rem;
 
-  color: var(--cor-fundo-1);
+    margin: 0 auto 6.5rem;
 
-  font-weight: 700;
-  font-size: 1.25rem;
+    border: none;
 
-  cursor: pointer;
+    border-radius: 1.25rem;
 
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+    background: var(--cor-destaque);
+
+    box-shadow:
+        5px 5px 7px 1px var(--sombra-destaque);
+
+    color: var(--cor-fundo-1);
+
+    font-weight: 700;
+
+    font-size: 1.25rem;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
-.botao-jogo:hover {
-  transform: translateY(-2px);
 
-  box-shadow: 5px 7px 10px 2px var(--sombra-destaque);
+.botao-jogo:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        5px 7px 10px 2px var(--sombra-destaque);
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    #descricao,
+    .descricao2,
+    .subtititulo {
+
+        width: 80%;
+
+    }
+
+
+    #video-games {
+
+        width: 80%;
+
+        height: auto;
+
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .menu {
+
+        width: 3.8rem;
+
+    }
+
+
+    .menu:hover {
+
+        width: 14rem;
+
+    }
+
+
+    #img-simce {
+
+        width: 80%;
+
+    }
+
+
+    .titulo {
+
+        font-size: 2rem;
+
+        text-align: center;
+
+    }
+
+
+    #descricao,
+    .descricao2,
+    .subtititulo {
+
+        width: 80%;
+
+    }
+
+
+    #video-games {
+
+        width: 85%;
+
+        height: auto;
+
+    }
+
 }
