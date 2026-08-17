@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Aguarda a animação terminar antes de trocar de página
             setTimeout(function () {
-                window.location.assign("./index.html");
+                window.location.assign("../index.html");
             }, 500);
         });
     }

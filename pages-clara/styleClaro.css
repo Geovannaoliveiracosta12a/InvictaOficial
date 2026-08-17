@@ -19,7 +19,6 @@ html {
 }
 
 body {
-
     background: linear-gradient(
         135deg,
         var(--cor-texto),
@@ -38,7 +37,6 @@ body {
 ========================================================= */
 
 #page {
-
     max-width: 1300px;
 
     margin-inline: auto;
@@ -107,7 +105,6 @@ img {
 ========================================================= */
 
 .menu {
-
     position: fixed;
 
     top: 0;
@@ -142,7 +139,6 @@ img {
 ========================================================= */
 
 .logo {
-
     display: flex;
 
     align-items: center;
@@ -157,7 +153,6 @@ img {
 }
 
 .logo span {
-
     font-size: 2rem;
 
     font-weight: 700;
@@ -181,7 +176,6 @@ img {
 ========================================================= */
 
 .pesquisa {
-
     display: flex;
 
     align-items: center;
@@ -202,7 +196,6 @@ img {
 }
 
 .pesquisa span {
-
     white-space: nowrap;
 
     color: var(--cor-01);
@@ -222,7 +215,6 @@ img {
 ========================================================= */
 
 .item-menu {
-
     display: flex;
 
     align-items: center;
@@ -251,7 +243,6 @@ img {
 }
 
 .item-menu img {
-
     width: 1.75rem;
 
     height: 1.75rem;
@@ -262,7 +253,6 @@ img {
 }
 
 .item-menu span {
-
     white-space: nowrap;
 
     opacity: 0;
@@ -284,7 +274,6 @@ img {
 ========================================================= */
 
 .usuario {
-
     margin-top: auto;
 
     display: flex;
@@ -305,7 +294,6 @@ img {
 }
 
 .dados-usuario {
-
     opacity: 0;
 
     transition: 0.3s;
@@ -322,7 +310,6 @@ img {
 }
 
 .dados-usuario p {
-
     font-size: 0.7rem;
 
     color: var(--cor-01);
@@ -334,11 +321,84 @@ img {
 
 
 /* =========================================================
-   TEMA
+   TEMA — BOTÃO MODO CLARO/ESCURO
 ========================================================= */
 
 .modo-escuro {
+    display: flex;
+
+    align-items: center;
+
+    gap: 1.125rem;
+
+    width: 100%;
+
+    height: 2.75rem;
+
+    padding: 0.75rem;
+
+    margin-top: 0.5rem;
+
     border: none;
+
+    border-radius: 0.625rem;
+
+    background: transparent;
+
+    color: var(--cor-01);
+
+    cursor: pointer;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    font-family: 'Montserrat', sans-serif;
+
+    transition:
+        background 0.3s ease,
+        transform 0.2s ease;
+}
+
+.modo-escuro:hover {
+    background: rgba(161, 220, 230, 0.70);
+}
+
+.modo-escuro:active {
+    transform: scale(0.95);
+}
+
+.modo-escuro:focus {
+    outline: none;
+}
+
+.modo-escuro img {
+    width: 1.75rem;
+
+    height: 1.75rem;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
+
+    display: block;
+}
+
+.modo-escuro span {
+    white-space: nowrap;
+
+    font-size: 1rem;
+
+    font-weight: 500;
+
+    color: var(--cor-01);
+
+    opacity: 0;
+
+    transition: 0.3s ease;
+}
+
+.menu:hover .modo-escuro span {
+    opacity: 1;
 }
 
 
@@ -347,7 +407,6 @@ img {
 ========================================================= */
 
 .hero {
-
     display: flex;
 
     align-items: center;
@@ -373,7 +432,6 @@ img {
 }
 
 .conteudoInicial {
-
     max-width: 43.75rem;
 
     padding-top: 2rem;
@@ -384,7 +442,6 @@ img {
 }
 
 .conteudoInicial h1 {
-
     font-size: 2.5rem;
 
     font-weight: 700;
@@ -395,7 +452,6 @@ img {
 }
 
 .conteudoInicial p {
-
     margin-top: 1.5625rem;
 
     font-size: 1.2rem;
@@ -411,7 +467,6 @@ img {
 ========================================================= */
 
 .botoes {
-
     display: flex;
 
     gap: 1.5rem;
@@ -424,7 +479,6 @@ img {
 }
 
 .botoes button {
-
     width: 13.75rem;
 
     height: 3.625rem;
@@ -441,10 +495,11 @@ img {
 }
 
 
-/* ---------- PRINCIPAL ---------- */
+/* =========================================================
+   BOTÃO PRINCIPAL
+========================================================= */
 
 .btn-primary {
-
     background: var(--cor-destaque);
 
     color: var(--cor-menu);
@@ -456,17 +511,17 @@ img {
 }
 
 .btn-primary:hover {
-
     transform: translateY(-0.25rem);
 
     background: var(--cor-destaque-hover);
 }
 
 
-/* ---------- SECUNDÁRIO ---------- */
+/* =========================================================
+   BOTÃO SECUNDÁRIO
+========================================================= */
 
 .btn-secondary {
-
     background: var(--cor-12);
 
     color: var(--cor-menu);
@@ -475,7 +530,6 @@ img {
 }
 
 .btn-secondary:hover {
-
     transform: translateY(-0.25rem);
 
     background: rgba(255, 255, 255, 0.08);
@@ -487,7 +541,6 @@ img {
 ========================================================= */
 
 .prototipo {
-
     display: flex;
 
     justify-content: center;
@@ -500,7 +553,6 @@ img {
 }
 
 .prototipo img {
-
     width: 100%;
 
     max-width: 40.625rem;
@@ -517,7 +569,6 @@ img {
 ========================================================= */
 
 .politicas {
-
     display: flex;
 
     justify-content: center;
@@ -548,7 +599,6 @@ img {
 .diferencial h2,
 .objetivo h2,
 .publico h2 {
-
     color: var(--cor-menu);
 
     font-size: 1.5rem;
@@ -563,7 +613,6 @@ img {
 .diferencial p,
 .objetivo p,
 .publico p {
-
     color: var(--cor-menu);
 
     font-size: 1.1rem;
@@ -583,7 +632,6 @@ img {
 ========================================================= */
 
 .cards {
-
     display: grid;
 
     grid-template-columns: repeat(2, 20rem);
@@ -604,7 +652,6 @@ img {
 }
 
 .card {
-
     display: flex;
 
     align-items: center;
@@ -626,7 +673,6 @@ img {
 }
 
 .card:hover {
-
     transform: translateY(-0.25rem);
 
     border-color: var(--cor-menu);
@@ -636,7 +682,6 @@ img {
 }
 
 .card img {
-
     width: 2.8rem;
 
     height: 2.8rem;
@@ -645,7 +690,6 @@ img {
 }
 
 .card h3 {
-
     color: var(--cor-menu);
 
     font-size: 1rem;
