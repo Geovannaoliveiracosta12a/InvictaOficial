@@ -420,11 +420,11 @@ button.modo-escuro {
 
     max-width: 90%;
 
-    color: var(--cor-texto);
+    color: var(--cor-1);
 
     font-size: 1rem;
 
-    font-weight: 300;
+    font-weight: 400;
 
     line-height: 1.7;
 
