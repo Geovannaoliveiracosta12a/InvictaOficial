@@ -1,382 +1,528 @@
 @import "../colors.css";
 
-/* ---------- CSS DO MENU ---------- */
+/* =========================================================
+   CONFIGURAÇÕES GERAIS
+========================================================= */
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  background: linear-gradient(135deg, var(--cor-texto), var(--cor-15), var(--cor-texto));
-  color: var(--cor-texto);
-  position: relative;
-  min-height: 100vh;
+    background: linear-gradient(
+        135deg,
+        var(--cor-texto),
+        var(--cor-15),
+        var(--cor-texto)
+    );
+
+    color: var(--cor-08);
+
+    position: relative;
+    min-height: 100vh;
 }
 
-/* ---------- ANIMAÇÕES ---------- */
+
+/* =========================================================
+   ANIMAÇÕES
+========================================================= */
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(2rem); }
-  to   { opacity: 1; transform: translateY(0); }
+
+    from {
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
 }
 
-/* ---------- IMAGENS ---------- */
+
+/* =========================================================
+   IMAGENS
+========================================================= */
 
 img {
-  max-width: 100%;
-  display: block;
+    max-width: 100%;
+    display: block;
 }
 
-/* ---------- MENU ---------- */
+
+/* =========================================================
+   MENU LATERAL
+========================================================= */
 
 .menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 4.6875rem;
-  height: 100vh;
-  text-decoration: none;
+    position: fixed;
 
-   background: var(--cor-13);
+    top: 0;
+    left: 0;
 
-  display: flex;
-  flex-direction: column;
+    width: 4.6875rem;
+    height: 100vh;
 
-  padding: 1.25rem 0.9375rem;
+    background: var(--cor-13);
 
-  overflow: hidden;
-  transition: .35s ease;
+    display: flex;
+    flex-direction: column;
 
-  border-radius: 0 1.25rem 1.25rem 0;
-  z-index: 999;
+    padding: 1.25rem 0.9375rem;
+
+    overflow: hidden;
+
+    transition: width 0.35s ease;
+
+    border-radius: 0 1.25rem 1.25rem 0;
+
+    z-index: 999;
 }
 
 .menu:hover {
-  width: 16.25rem;
+    width: 16.25rem;
 }
 
-/* ---------- LOGO ---------- */
+
+/* =========================================================
+   LOGO
+========================================================= */
 
 .logo {
-  display: flex;
-  align-items: center;
-  gap: 0.9375rem;
-  margin-bottom: 2.5rem;
+    display: flex;
+    align-items: center;
+
+    gap: 0.9375rem;
+
+    margin-bottom: 2.5rem;
+
+    flex-shrink: 0;
 }
 
 .logo img {
-  width: 2.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
 }
 
 .logo span {
-  font-size: 2rem;
-  font-weight: 700;
-  white-space: nowrap;
-  color: var(--cor-01);
+    font-size: 2rem;
+    font-weight: 700;
 
-  opacity: 0;
-  transition: .3s;
+    color: var(--cor-01);
+
+    white-space: nowrap;
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
 }
 
 .menu:hover .logo span {
-  opacity: 1;
+    opacity: 1;
 }
 
-/* ---------- PESQUISA ---------- */
+
+/* =========================================================
+   PESQUISA
+========================================================= */
 
 .pesquisa {
-  display: flex;
-  align-items: center;
-  gap: 0.9375rem;
-  color: var(--cor-08);
+    display: flex;
+    align-items: center;
 
-  background: #A1DCE6B2;
-  border-radius: 0.625rem;
+    gap: 0.9375rem;
 
-  padding: 0.75rem;
-  margin-bottom: 1.5625rem;
+    width: 100%;
+
+    background: rgba(161, 220, 230, 0.70);
+
+    border-radius: 0.625rem;
+
+    padding: 0.75rem;
+
+    margin-bottom: 1.5625rem;
+
+    flex-shrink: 0;
 }
 
 .pesquisa img {
-  width: 1.625rem;
+    width: 1.625rem;
+    height: 1.625rem;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
 }
 
 .pesquisa span {
-  white-space: nowrap;
-  opacity: 0;
-  transition: .3s;
+    white-space: nowrap;
+
+    color: var(--cor-08);
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
 }
 
 .menu:hover .pesquisa span {
-  opacity: 1;
+    opacity: 1;
 }
 
-/* ---------- ITENS ---------- */
-/* ---------- ITENS ---------- */
+
+/* =========================================================
+   ITENS DO MENU
+========================================================= */
 
 .item-menu {
-  display: flex;
-  align-items: center;
-  gap: 1.125rem;
+    display: flex;
+    align-items: center;
 
-  width: 100%;
+    gap: 1.125rem;
 
-  padding: 0.75rem;
-  margin-bottom: 0.5rem;
+    width: 100%;
 
-  border-radius: 0.625rem;
+    padding: 0.75rem;
 
-  cursor: pointer;
-  transition: .3s ease;
+    margin-bottom: 0.5rem;
 
-  text-decoration: none;
-  color: var(--cor-08);
+    border-radius: 0.625rem;
+
+    cursor: pointer;
+
+    transition: background 0.3s ease;
+
+    text-decoration: none;
+
+    color: var(--cor-08);
+
+    flex-shrink: 0;
 }
 
 .item-menu:hover {
-   background: var(--cor-06);
+    background: var(--cor-06);
 }
 
 .item-menu img {
-  width: 1.75rem;
-  height: 1.75rem;
-  object-fit: contain;
-  flex-shrink: 0;
+    width: 1.75rem;
+    height: 1.75rem;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
 }
 
 .item-menu span {
-  white-space: nowrap;
-  opacity: 0;
-  transition: .3s ease;
-  font-size: 1rem;
-  font-weight: 500;
+    white-space: nowrap;
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+
+    font-size: 1rem;
+    font-weight: 500;
+
+    color: var(--cor-08);
 }
 
 .menu:hover .item-menu span {
-  opacity: 1;
+    opacity: 1;
 }
 
-/* ---------- USUÁRIO ---------- */
+
+/* =========================================================
+   USUÁRIO
+========================================================= */
 
 .usuario {
-  margin-top: auto;
-  margin-bottom: 20px;
+    margin-top: auto;
 
-  display: flex;
-  align-items: center;
-  gap: 0.9375rem;
+    margin-bottom: 20px;
 
-  background: var(--cor-06);
-  padding: 0.75rem;
-  border-radius: 0.625rem;
+    display: flex;
+    align-items: center;
+
+    gap: 0.9375rem;
+
+    width: 100%;
+
+    background: var(--cor-06);
+
+    padding: 0.75rem;
+
+    border-radius: 0.625rem;
+
+    flex-shrink: 0;
 }
 
 .usuario img {
-  width: 2.1875rem;
+    width: 2.1875rem;
+    height: 2.1875rem;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
 }
 
 .dados-usuario {
-  opacity: 0;
-  transition: .3s;
-  white-space: nowrap;
+    opacity: 0;
+
+    max-width: 0;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    transition:
+        opacity 0.3s ease,
+        max-width 0.3s ease;
 }
 
 .menu:hover .dados-usuario {
-  opacity: 1;
+    opacity: 1;
+    max-width: 180px;
 }
 
 .dados-usuario h4 {
-  font-size: .9rem;
-  margin: 0;
-  color: var(--cor-01);
+    font-size: 0.9rem;
+
+    font-weight: 600;
+
+    margin: 0;
+
+    color: var(--cor-01);
 }
 
 .dados-usuario p {
-  font-size: 0.7rem;
-  font-weight: 400;
-  color: var(--cor-01);
-  opacity: 0.6;
-  margin: 0.25rem 0 0 0;
-  width: auto;
-  height: auto;
+    font-size: 0.7rem;
+
+    font-weight: 400;
+
+    color: var(--cor-01);
+
+    opacity: 0.6;
+
+    margin-top: 0.25rem;
 }
 
-/* ---------- TEMA ---------- */
 
-.menu:hover .item-menu {
-  opacity: 1;
+/* =========================================================
+   MODO ESCURO
+========================================================= */
+
+.modo-claro {
+    flex-shrink: 0;
 }
 
-.item-menu{ 
-  display: flex;
-  align-items: center;
-  gap: 1.125rem;
-
-  width: 100%;
-
-  padding: 0.75rem;
-  margin-bottom: 0.5rem;
-
-  border-radius: 0.625rem;
-
-  cursor: pointer;
-  transition: .3s ease;
-
-  text-decoration: none;
-  color: var(--cor-08);
+.modo-claro img {
+    width: 2rem;
+    height: 1.75rem;
 }
 
-.item-menu:hover {
-  background: var(--cor-06);
+
+/* =========================================================
+   TÍTULO
+========================================================= */
+
+h1 {
+    text-align: center;
+
+    margin-top: 114px;
+
+    color: var(--cor-01);
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 54px;
+
+    font-weight: 700;
+
+    line-height: normal;
+
+    animation: fadeInUp 0.6s ease both;
 }
 
-.item-menu img {
-  width: 2rem;
-  height: 1.75rem;
-  object-fit: contain;
-  flex-shrink: 0;
-}
 
-.item-menu span {
-  white-space: nowrap;
-  opacity: 0;
-  transition: .3s ease;
-  font-size: 1rem;
-  font-weight: 500;
-}
+/* =========================================================
+   ÁREA DAS REFERÊNCIAS
+========================================================= */
 
-/* ---------- INICIO DE REFERENCIAS ---------- */
-h1{
-  text-align: center;
-  margin-top: 30px;
-  margin-top: 114px;-
-}
+.referencias-img {
+    position: relative;
 
-h1{
-  color: var(--cor-01);
-  font-family: Montserrat;
-  font-size: 54px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
+    width: fit-content;
 
-/*--------- REFERÊNCIAS ----------*/
+    margin: 65px auto 0;
+
+    animation: fadeInUp 0.6s 0.15s ease both;
+}
 
 #img-ref {
     display: block;
-    margin: 65px auto 0;
+
+    margin: 0;
 }
 
-/*--------- BOTOES ----------*/
 
-.referencias-img {
-  position: relative;
-  width: fit-content;
-  margin: 65px auto 0;
-}
-
-#img-ref {
-  display: block;
-  margin: 0;
-}
+/* =========================================================
+   BOTÕES "VER MAIS"
+========================================================= */
 
 .referencias-img button {
-  position: absolute;
-  background: transparent;
-  border: none;
-  color: var(--cor-01);
-  font-family: Montserrat;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
+    position: absolute;
+
+    background: transparent;
+
+    border: none;
+
+    color: var(--cor-01);
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: opacity 0.2s ease;
 }
+
+.referencias-img button:hover {
+    opacity: 0.65;
+}
+
+
+/* BOTÃO 1 */
 
 #botao-1 {
-  top: 174px;
-  right: 145px;
+    top: 174px;
+    right: 145px;
 }
+
+
+/* BOTÃO 2 */
 
 #botao-2 {
-  top: 475px;
-  right: 145px;
+    top: 475px;
+    right: 145px;
 }
+
+
+/* BOTÃO 3 */
 
 #botao-3 {
-  top: 776px;
-  right: 145px;
+    top: 776px;
+    right: 145px;
 }
+
+
+/* BOTÃO 4 */
 
 #botao-4 {
-  top: 1077px;
-  right: 145px;
+    top: 1077px;
+    right: 145px;
 }
+
+
+/* BOTÃO 5 */
 
 #botao-5 {
-  top: 1408px;
-  right: 145px;
+    top: 1408px;
+    right: 145px;
 }
+
+
+/* BOTÃO 6 */
 
 #botao-6 {
-  top: 1739px;
-  right: 145px;
+    top: 1739px;
+    right: 145px;
 }
 
 
-/* ---------- INFORMACOES  ---------- */
+/* =========================================================
+   INFORMAÇÕES
+========================================================= */
 
+.info {
+    background: var(--cor-01);
 
-h3{
-  color: var(--cor-14);
-  font-family: Montserrat;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
+    width: 100%;
+
+    height: 200px;
+
+    margin-top: 150px;
+
+    margin-bottom: 300px;
+}
+
+.info h3 {
+    color: var(--cor-14);
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 32px;
+
+    font-weight: 500;
+
+    line-height: normal;
+
+    margin-left: 230px;
+
+    padding-top: 30px;
 }
 
 
-h3{
-  margin-left: 230px;
-   padding-top: 30px;
+/* =========================================================
+   INFORMAÇÕES DE CONTATO
+========================================================= */
+
+.item-info {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-left: 350px;
+
+    margin-top: 20px;
+
+    color: var(--cor-texto);
+
+    padding-top: 30px;
 }
 
-.info{
-  background: var(--cor-01);
-  width: 100%;
-  height: 200px;
-  margin-top: 150px;
-  margin-bottom: 300px;
+.item-info i:not(:first-child) {
+    margin-left: 50px;
 }
 
-.item-info{
-  display: flex;
-  align-items: center;
-  gap: 15px;          
-  margin-left: 350px;
-  margin-top: 20px;
-  color: var(--cor-texto);
-  padding-top: 30px;
+.item-info i {
+    color: var(--cor-texto);
 }
 
-.item-info i:not(:first-child){
-  margin-left: 50px; 
-}
+.item-info p {
+    margin: 0;
 
-.item-info p{
-  margin: 0;
-  color: var(--cor-texto);
-  font-family: Montserrat;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+    color: var(--cor-texto);
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 20px;
+
+    font-weight: 400;
+
+    line-height: normal;
 }
