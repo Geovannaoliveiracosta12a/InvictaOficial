@@ -13,6 +13,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -28,6 +29,8 @@ body {
     position: relative;
 
     min-height: 100vh;
+
+    overflow-x: hidden;
 }
 
 
@@ -99,6 +102,60 @@ img {
 
 
 /* =========================================================
+   LOGO
+   FORA DO MENU
+========================================================= */
+
+.logo {
+    position: absolute;
+
+    top: 0.8rem;
+    right: 1rem;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 0.45rem;
+
+    width: auto;
+    height: auto;
+
+    margin: 0;
+    padding: 0;
+
+    z-index: 1000;
+}
+
+.logo img {
+    width: 2.5rem;
+    height: 2.5rem;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
+}
+
+.logo span {
+    display: block;
+
+    font-size: 1.2rem;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+    color: var(--cor-texto);
+
+    opacity: 1;
+}
+
+
+/* =========================================================
    MENU
 ========================================================= */
 
@@ -130,45 +187,6 @@ img {
 
 .menu:hover {
     width: 16.25rem;
-}
-
-
-/* =========================================================
-   LOGO
-========================================================= */
-
-.logo {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 0.9375rem;
-
-    margin-bottom: 2.5rem;
-}
-
-.logo img {
-    width: 2.5rem;
-}
-
-.logo span {
-
-    font-size: 2rem;
-
-    font-weight: 700;
-
-    white-space: nowrap;
-
-    color: var(--cor-texto);
-
-    opacity: 0;
-
-    transition: 0.3s;
-}
-
-.menu:hover .logo span {
-    opacity: 1;
 }
 
 
@@ -435,7 +453,9 @@ img {
 }
 
 
-/* ---------- BOTÃO PRINCIPAL ---------- */
+/* =========================================================
+   BOTÃO PRINCIPAL
+========================================================= */
 
 .btn-primary {
 
@@ -457,7 +477,9 @@ img {
 }
 
 
-/* ---------- BOTÃO SECUNDÁRIO ---------- */
+/* =========================================================
+   BOTÃO SECUNDÁRIO
+========================================================= */
 
 .btn-secondary {
 
@@ -649,4 +671,505 @@ img {
     line-height: 1.2;
 
     text-transform: uppercase;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — CELULAR
+========================================================= */
+
+@media (max-width: 600px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+
+    /* =====================================================
+       LOGO
+       CANTO SUPERIOR DIREITO
+       NÃO FIXA NA TELA
+    ===================================================== */
+
+    body > .logo {
+
+        position: absolute !important;
+
+        top: 0.8rem !important;
+
+        right: 1rem !important;
+
+        left: auto !important;
+
+        bottom: auto !important;
+
+        width: auto !important;
+
+        height: auto !important;
+
+        margin: 0 !important;
+
+        padding: 0 !important;
+
+        display: flex !important;
+
+        flex-direction: row !important;
+
+        align-items: center !important;
+
+        justify-content: flex-end !important;
+
+        gap: 0.45rem !important;
+
+        z-index: 1000 !important;
+    }
+
+    body > .logo img {
+
+        width: 2.2rem !important;
+
+        height: 2.2rem !important;
+
+        object-fit: contain !important;
+
+        flex-shrink: 0 !important;
+    }
+
+    body > .logo span {
+
+        display: block !important;
+
+        width: auto !important;
+
+        margin: 0 !important;
+
+        padding: 0 !important;
+
+        color: var(--cor-texto) !important;
+
+        font-size: 1rem !important;
+
+        font-weight: 700 !important;
+
+        line-height: 1 !important;
+
+        white-space: nowrap !important;
+
+        opacity: 1 !important;
+    }
+
+
+    /* =====================================================
+       MENU INFERIOR
+    ===================================================== */
+
+    .menu {
+
+        position: fixed;
+
+        top: auto;
+
+        bottom: 0;
+
+        left: 0;
+
+        width: 100%;
+
+        height: 4.5rem;
+
+        padding:
+            0.6rem
+            0.75rem;
+
+        display: flex;
+
+        flex-direction: row;
+
+        align-items: center;
+
+        justify-content: space-around;
+
+        border-radius:
+            1.25rem
+            1.25rem
+            0
+            0;
+
+        overflow: visible;
+
+        z-index: 999;
+
+        touch-action: pan-y;
+    }
+
+    .menu:hover {
+        width: 100%;
+    }
+
+
+    /* =====================================================
+       PESQUISA
+    ===================================================== */
+
+    .pesquisa {
+        display: none;
+    }
+
+
+    /* =====================================================
+       ITENS DO MENU
+    ===================================================== */
+
+    .item-menu {
+
+        width: auto;
+
+        padding: 0.5rem;
+
+        margin: 0;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        flex-shrink: 0;
+    }
+
+    .item-menu span {
+        display: none;
+    }
+
+    .item-menu img {
+
+        width: 1.7rem;
+
+        height: 1.7rem;
+    }
+
+
+    /* =====================================================
+       USUÁRIO
+    ===================================================== */
+
+    .usuario {
+
+        margin: 0;
+
+        padding: 0.4rem;
+
+        background: transparent;
+
+        flex-shrink: 0;
+    }
+
+    .usuario img {
+
+        width: 2rem;
+
+        height: 2rem;
+    }
+
+    .dados-usuario {
+        display: none;
+    }
+
+
+    /* =====================================================
+       MODO ESCURO
+    ===================================================== */
+
+    .modo-escuro {
+
+        width: auto;
+
+        height: auto;
+
+        margin: 0;
+
+        padding: 0.5rem;
+
+        flex-shrink: 0;
+    }
+
+    .modo-escuro span {
+        display: none;
+    }
+
+    .modo-escuro img {
+
+        width: 1.7rem;
+
+        height: 1.7rem;
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero {
+
+        flex-direction: column;
+
+        width: 100%;
+
+        padding-top: 5rem;
+
+        padding-bottom: 6rem;
+
+        padding-left: 1.25rem;
+
+        padding-right: 1.25rem;
+
+        text-align: center;
+    }
+
+
+    /* =====================================================
+       CONTEÚDO
+    ===================================================== */
+
+    .hero-conteudo {
+        width: 100%;
+    }
+
+    .conteudoInicial {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        padding: 0;
+
+        animation:
+            fadeInUp
+            0.7s
+            ease
+            both;
+    }
+
+    .conteudoInicial h1 {
+
+        font-size: 2rem;
+
+        line-height: 1.2;
+    }
+
+    .conteudoInicial p {
+
+        margin-top: 1rem;
+
+        font-size: 1rem;
+
+        line-height: 1.6;
+    }
+
+
+    /* =====================================================
+       BOTÕES
+    ===================================================== */
+
+    .botoes {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        width: 100%;
+
+        gap: 1rem;
+
+        margin-top: 2rem;
+
+        padding-left: 0;
+    }
+
+    .botoes button {
+
+        width: 100%;
+
+        max-width: 20rem;
+
+        height: 3.25rem;
+    }
+
+
+    /* =====================================================
+       PROTÓTIPO
+    ===================================================== */
+
+    .prototipo {
+
+        width: 100%;
+
+        margin-top: 2.5rem;
+    }
+
+    .prototipo img {
+
+        width: 90%;
+
+        max-width: 25rem;
+
+        margin-inline: auto;
+    }
+
+
+    /* =====================================================
+       DIFERENCIAIS
+    ===================================================== */
+
+    .politicas {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 2.5rem;
+
+        width: 100%;
+
+        max-width: 100%;
+
+        margin-top: 6rem;
+
+        padding:
+            0
+            1.5rem
+            6rem;
+    }
+
+    .diferencial,
+    .objetivo,
+    .publico {
+
+        width: 100%;
+
+        max-width: 25rem;
+
+        text-align: center;
+    }
+
+    .diferencial h2,
+    .objetivo h2,
+    .publico h2 {
+
+        font-size: 1.25rem;
+
+        text-align: center;
+    }
+
+    .diferencial p,
+    .objetivo p,
+    .publico p {
+
+        font-size: 1rem;
+
+        text-align: center;
+    }
+
+
+    /* =====================================================
+       CARDS
+    ===================================================== */
+
+    .cards {
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 1rem;
+
+        width: 100%;
+
+        max-width: 100%;
+
+        margin-top: 5rem;
+
+        padding:
+            0
+            1.25rem
+            6rem;
+    }
+
+    .card {
+
+        width: 100%;
+
+        max-width: 25rem;
+
+        min-height: 4.5rem;
+
+        margin: 0 auto;
+    }
+
+    .card img {
+
+        width: 2.5rem;
+
+        height: 2.5rem;
+    }
+
+    .card h3 {
+        font-size: 0.95rem;
+    }
+}
+
+
+/* =========================================================
+   CELULARES PEQUENOS
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .logo {
+        top: 0.7rem;
+        right: 0.7rem;
+    }
+
+    .logo img {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .logo span {
+        font-size: 0.9rem;
+    }
+
+    .hero {
+
+        padding-top: 4.5rem;
+
+        padding-left: 1rem;
+
+        padding-right: 1rem;
+    }
+
+    .conteudoInicial h1 {
+        font-size: 1.7rem;
+    }
+
+    .conteudoInicial p {
+        font-size: 0.9rem;
+    }
+
+    .botoes button {
+        max-width: 18rem;
+    }
+
+    .politicas {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .cards {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 }
